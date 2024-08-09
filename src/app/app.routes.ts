@@ -1,6 +1,6 @@
 import { RouterModule, Routes } from '@angular/router';
-import { LoginNewComponent } from './components/login-new/login-new.component';
-import { HomeNewComponent } from './components/home-new/home-new.component';
+import { LoginNewComponent } from './components/login/login-new.component';
+import { HomeNewComponent } from './components/home/home-new.component';
 
 const routes: Routes = [
     { path: '', component: LoginNewComponent }, // Root path should show LoginNewComponent

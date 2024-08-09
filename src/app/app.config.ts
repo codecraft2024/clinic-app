@@ -2,8 +2,8 @@ import { ApplicationConfig, provideZoneChangeDetection } from '@angular/core';
 import { provideRouter, Routes } from '@angular/router';
 import { provideClientHydration } from '@angular/platform-browser';
 
- import {LoginNewComponent} from "./components/login-new/login-new.component";
-import {HomeNewComponent} from "./components/home-new/home-new.component";
+ import {LoginNewComponent} from "./components/login/login-new.component";
+import {HomeNewComponent} from "./components/home/home-new.component";
 const routes: Routes = [
   { path: '', component: LoginNewComponent },
   { path: 'home', component: HomeNewComponent },

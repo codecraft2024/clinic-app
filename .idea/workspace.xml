@@ -4,35 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="953a7e52-9e8e-493c-ac64-6550f948b64c" name="Changes" comment="">
+    <list default="true" id="953a7e52-9e8e-493c-ac64-6550f948b64c" name="Changes" comment="update">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/app-routing.module.ts.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/app.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/app.component.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/app.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/app.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app.config.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/app.routes.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app.routes.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/layout/footer/footer.component.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/layout/footer/footer.component.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/layout/footer/footer.component.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/layout/footer/footer.component.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/layout/header/header.component.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/layout/header/header.component.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/layout/header/header.component.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/layout/header/header.component.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/layout/header/header.component.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/layout/home/home.component.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/layout/home/home.component.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/layout/home/home.component.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/layout/home/home.component.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/layout/login/login.component.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/layout/login/login.component.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/layout/login/login.component.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/layout/main/main.component.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/layout/main/main.component.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/layout/main/main.component.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/layout/main/main.component.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/layout/main/main.component.ts" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -100,12 +73,25 @@
       <workItem from="1723207999650" duration="10000" />
       <workItem from="1723208012888" duration="62000" />
       <workItem from="1723208084686" duration="576000" />
-      <workItem from="1723208675006" duration="2965000" />
+      <workItem from="1723208675006" duration="3309000" />
     </task>
+    <task id="LOCAL-00001" summary="update">
+      <option name="closed" value="true" />
+      <created>1723211770496</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1723211770496</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="update" />
+    <option name="LAST_COMMIT_MESSAGE" value="update" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

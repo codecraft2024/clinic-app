@@ -1,0 +1,22 @@
+/* You can add global styles to this file, and also import other style files */
+html {
+    background-color: #F7F8FA;
+    font-family:  sans-serif;
+}
+
+.material-icons{
+    
+    font-size: 24px; /* Change the size */
+    color: #C3CAD9;     /* Change the color */
+}
+.mr1{
+    margin-right: 0.5rem;
+}
+
+.m2{
+    margin: 1rem;
+}
+
+.mr2{
+    margin-right: 1rem;
+}  

@@ -1,0 +1,22 @@
+.header-icon{
+    width: 40px;
+    height: 40px;
+padding: 10px;
+background-color: #fff;
+box-shadow: 0px 2px 5px 0px rgba(38, 51, 77, 0.03);
+border-radius: 6.25rem;
+display: flex;
+justify-content: center;
+align-items: center;
+
+}
+
+.header-container{
+    display: flex;
+    padding: 24px;
+    border-bottom: solid 1px #EDEFF2;
+}
+.search{
+    display: block;
+    margin: auto;
+}

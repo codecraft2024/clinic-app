@@ -1,20 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="AutoImportSettings">
-    <option name="autoReloadType" value="SELECTIVE" />
-  </component>
   <component name="ChangeListManager">
-    <list default="true" id="953a7e52-9e8e-493c-ac64-6550f948b64c" name="Changes" comment="fix icon">
-      <change afterPath="$PROJECT_DIR$/src/app/guards/auth-guard.service.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/services/auth/AuthService.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/services/auth/StorageService.ts" afterDir="false" />
+    <list default="true" id="3bcc5efb-57c3-4f95-84bc-f156fa0bfa3c" name="Changes" comment="update">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/app.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app.config.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/header/header-new.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/header/header-new.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/header/header-new.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/header/header-new.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/home/home-new.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/home/home-new.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/login/login-new.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/login/login-new.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/login/login-new.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/login/login-new.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/menu/menu-new.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/menu/menu-new.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/menu/menu-new.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/menu/menu-new.component.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/menu/menu-new.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/menu/menu-new.component.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,186 +15,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="MarkdownSettingsMigration">
-    <option name="stateVersion" value="1" />
-  </component>
-  <component name="ProjectColorInfo">{
-  &quot;associatedIndex&quot;: 1
-}</component>
-  <component name="ProjectId" id="2kQDrLNqqpkFGRLY8loR8QxGjyr" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
-  <component name="ProjectViewState">
-    <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showLibraryContents" value="true" />
-  </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Node.js.Unnamed.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;dev&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/minaanwer/Desktop/githup-repo/clinic-app&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_interpreter_path&quot;: &quot;/Users/minaanwer/.nvm/versions/node/v18.20.4/bin/node&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;npm.run.executor&quot;: &quot;Run&quot;,
-    &quot;npm.start.executor&quot;: &quot;Run&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;settings.nodejs&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;/Users/minaanwer/Desktop/githup-repo/clinic-app/node_modules/typescript/lib&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "git-widget-placeholder": "dev",
+    "ts.external.directory.path": "/Users/amiraayman/Desktop/clinic-app/node_modules/typescript/lib"
   }
-}</component>
-  <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/app/guards" />
-      <recent name="$PROJECT_DIR$/public" />
-    </key>
-  </component>
-  <component name="RunManager">
-    <configuration name="start" type="js.build_tools.npm" nameIsGenerated="true">
-      <package-json value="$PROJECT_DIR$/package.json" />
-      <command value="run" />
-      <scripts>
-        <script value="start" />
-      </scripts>
-      <node-interpreter value="project" />
-      <package-manager value="$USER_HOME$/.nvm/versions/node/v18.20.4/bin/npm" />
-      <envs />
-      <method v="2" />
-    </configuration>
-  </component>
-  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+}]]></component>
   <component name="TaskManager">
-    <task active="true" id="Default" summary="Default task">
-      <changelist id="953a7e52-9e8e-493c-ac64-6550f948b64c" name="Changes" comment="" />
-      <created>1723207104141</created>
-      <option name="number" value="Default" />
-      <option name="presentableId" value="Default" />
-      <updated>1723207104141</updated>
-      <workItem from="1723207105265" duration="890000" />
-      <workItem from="1723207999650" duration="10000" />
-      <workItem from="1723208012888" duration="62000" />
-      <workItem from="1723208084686" duration="576000" />
-      <workItem from="1723208675006" duration="9023000" />
-    </task>
-    <task id="LOCAL-00001" summary="update">
-      <option name="closed" value="true" />
-      <created>1723211770496</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1723211770496</updated>
-    </task>
-    <task id="LOCAL-00002" summary="update">
-      <option name="closed" value="true" />
-      <created>1723212004395</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1723212004395</updated>
-    </task>
-    <task id="LOCAL-00003" summary="update">
-      <option name="closed" value="true" />
-      <created>1723212104829</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1723212104829</updated>
-    </task>
-    <task id="LOCAL-00004" summary="update">
-      <option name="closed" value="true" />
-      <created>1723212146751</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1723212146751</updated>
-    </task>
-    <task id="LOCAL-00005" summary="fix icon">
-      <option name="closed" value="true" />
-      <created>1723213395787</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1723213395787</updated>
-    </task>
-    <task id="LOCAL-00006" summary="fix icon">
-      <option name="closed" value="true" />
-      <created>1723213625779</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1723213625779</updated>
-    </task>
-    <task id="LOCAL-00007" summary="fix icon">
-      <option name="closed" value="true" />
-      <created>1723214431672</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1723214431672</updated>
-    </task>
-    <task id="LOCAL-00008" summary="fix icon">
-      <option name="closed" value="true" />
-      <created>1723216866920</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1723216866920</updated>
-    </task>
-    <task id="LOCAL-00009" summary="fix icon">
-      <option name="closed" value="true" />
-      <created>1723217990653</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1723217990653</updated>
-    </task>
-    <option name="localTasksCounter" value="10" />
     <servers />
-  </component>
-  <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="3" />
-  </component>
-  <component name="Vcs.Log.History.Properties">
-    <option name="COLUMN_ID_ORDER">
-      <list>
-        <option value="Default.Root" />
-        <option value="Default.Author" />
-        <option value="Default.Date" />
-        <option value="Default.Subject" />
-        <option value="Space.CommitStatus" />
-      </list>
-    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="update" />
-    <MESSAGE value="fix icon" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix icon" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/src/app/components/login/login-new.component.ts</url>
-          <line>34</line>
-          <properties lambdaOrdinal="-1" />
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/src/app/components/login/login-new.component.ts</url>
-          <line>30</line>
-          <properties lambdaOrdinal="-1" />
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
-  </component>
-  <component name="XSLT-Support.FileAssociations.UIState">
-    <expand />
-    <select />
+    <option name="LAST_COMMIT_MESSAGE" value="update" />
   </component>
 </project>

@@ -1,12 +1,15 @@
 <div class="d-flex">
 
+    <div>
+        <button class="sidebar-toggle" (click)="toggleSidebar()">Toggle</button>
 
-    <div class="sidebar">
+    </div>
+    <div class="sidebar" [class.closed]="isSidebarClosed">
 
 
-        <ul class="sidebar-nav">
+        <ul class="sidebar-nav"  >
             <div>
-                <span>MAIN MENU </span>
+<!--                <span  >MAIN MENU </span>-->
                 <li class=""> <a class="active">
                     <i class="material-icons mr2 ">dashboard</i>Dashboard
                 </a> </li>
@@ -22,7 +25,7 @@
                 </a></li>
             </div>
             <div style="margin-top: 2.5rem;">
-                <span>SECOND MENU </span>
+<!--                <span>SECOND MENU </span>-->
                 <li class=""> <a class="">
                     <i class="material-icons mr2 ">account_circle</i>Users
                 </a> </li>
@@ -35,7 +38,5 @@
 
     </div>
 
-    <div>
 
-    </div>
 </div>

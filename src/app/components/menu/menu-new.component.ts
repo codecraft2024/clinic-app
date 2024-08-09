@@ -5,8 +5,13 @@ import { Component } from '@angular/core';
   standalone: true,
   imports: [],
   templateUrl: './menu-new.component.html',
-  styleUrl: './menu-new.component.scss'
+  styleUrls: ['./menu-new.component.scss']
+
 })
 export class MenuNewComponent {
+  isSidebarClosed: boolean = false;
 
+  toggleSidebar() {
+    this.isSidebarClosed = !this.isSidebarClosed;
+  }
 }

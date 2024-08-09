@@ -4,20 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="953a7e52-9e8e-493c-ac64-6550f948b64c" name="Changes" comment="update">
+    <list default="true" id="953a7e52-9e8e-493c-ac64-6550f948b64c" name="Changes" comment="fix icon">
+      <change afterPath="$PROJECT_DIR$/src/app/components/login/UserLoginModel.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/app.routes.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/header/header-new.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/header/header-new.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/components/login/login-new.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/login/login-new.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/login/login-new.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/login/login-new.component.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/shared/bg/bg.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/bg/bg.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/shared/icon/menu/-profile.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/icon/menu/-profile.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/shared/icon/menu/Icon-arrowRight.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/icon/menu/Icon-arrowRight.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/shared/icon/menu/Icon-close.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/icon/menu/Icon-close.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/shared/icon/menu/Icon-search.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/icon/menu/Icon-search.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/shared/icon/menu/Icon.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/icon/menu/Icon.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/shared/icon/menu/ic-notif.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/icon/menu/ic-notif.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/shared/icon/menu/logo.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/icon/menu/logo.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/login/login-new.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/login/login-new.component.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -90,7 +81,7 @@
       <workItem from="1723207999650" duration="10000" />
       <workItem from="1723208012888" duration="62000" />
       <workItem from="1723208084686" duration="576000" />
-      <workItem from="1723208675006" duration="4689000" />
+      <workItem from="1723208675006" duration="5738000" />
     </task>
     <task id="LOCAL-00001" summary="update">
       <option name="closed" value="true" />
@@ -124,7 +115,23 @@
       <option name="project" value="LOCAL" />
       <updated>1723212146751</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="fix icon">
+      <option name="closed" value="true" />
+      <created>1723213395787</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1723213395787</updated>
+    </task>
+    <task id="LOCAL-00006" summary="fix icon">
+      <option name="closed" value="true" />
+      <created>1723213625779</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1723213625779</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -132,7 +139,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="update" />
-    <option name="LAST_COMMIT_MESSAGE" value="update" />
+    <MESSAGE value="fix icon" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix icon" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

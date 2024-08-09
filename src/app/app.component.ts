@@ -1,17 +1,17 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { HeaderComponent } from "./layout/header/header.component";
-import { FooterComponent } from "./layout/footer/footer.component";
-import { MainComponent } from './layout/main/main.component';
-import { LoginComponent } from './layout/login/login.component';
+import { HeaderNewComponent } from "./components/header-new/header-new.component";
+import { FooterNewComponent } from "./components/footer-new/footer-new.component";
+import { MenuNewComponent } from './components/menu-new/menu-new.component';
+import { LoginNewComponent } from './components/login-new/login-new.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, HeaderComponent, FooterComponent,MainComponent,LoginComponent],
+  imports: [RouterOutlet, HeaderNewComponent, FooterNewComponent,MenuNewComponent,LoginNewComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'my-app';
+
 }

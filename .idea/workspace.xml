@@ -1,4 +1,114 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="PropertiesComponent">{}</component>
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="953a7e52-9e8e-493c-ac64-6550f948b64c" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/app-routing.module.ts.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/app.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/app.component.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/app.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/app.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app.config.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/app.routes.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app.routes.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/layout/footer/footer.component.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/layout/footer/footer.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/layout/footer/footer.component.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/layout/footer/footer.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/layout/header/header.component.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/layout/header/header.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/layout/header/header.component.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/layout/header/header.component.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/layout/header/header.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/layout/home/home.component.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/layout/home/home.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/layout/home/home.component.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/layout/home/home.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/layout/login/login.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/layout/login/login.component.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/layout/login/login.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/layout/main/main.component.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/layout/main/main.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/layout/main/main.component.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/layout/main/main.component.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/layout/main/main.component.ts" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 1
+}</component>
+  <component name="ProjectId" id="2kQDrLNqqpkFGRLY8loR8QxGjyr" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Node.js.Unnamed.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "dev",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/Users/minaanwer/Desktop/githup-repo/clinic-app",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_interpreter_path": "/Users/minaanwer/.nvm/versions/node/v18.20.4/bin/node",
+    "nodejs_package_manager_path": "npm",
+    "npm.run.executor": "Run",
+    "npm.start.executor": "Run",
+    "settings.editor.selected.configurable": "settings.nodejs",
+    "ts.external.directory.path": "/Users/minaanwer/Desktop/githup-repo/clinic-app/node_modules/typescript/lib",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RunManager">
+    <configuration name="start" type="js.build_tools.npm" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="start" />
+      </scripts>
+      <node-interpreter value="project" />
+      <package-manager value="$USER_HOME$/.nvm/versions/node/v18.20.4/bin/npm" />
+      <envs />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="953a7e52-9e8e-493c-ac64-6550f948b64c" name="Changes" comment="" />
+      <created>1723207104141</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1723207104141</updated>
+      <workItem from="1723207105265" duration="890000" />
+      <workItem from="1723207999650" duration="10000" />
+      <workItem from="1723208012888" duration="62000" />
+      <workItem from="1723208084686" duration="576000" />
+      <workItem from="1723208675006" duration="2965000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
 </project>

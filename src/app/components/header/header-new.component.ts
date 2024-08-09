@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
+import {AuthService} from "../../services/auth/AuthService";
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-header-new',
@@ -12,5 +14,17 @@ import {FormsModule, ReactiveFormsModule} from "@angular/forms";
   styleUrl: './header-new.component.scss'
 })
 export class HeaderNewComponent {
+
+    constructor(private authService:AuthService, private router: Router) {
+
+    }
+
+    onLogout() {
+        console.log("on cancel")
+        this.authService.clearAuthToken()
+        this.router.navigate(['']);
+
+    }
+
 
 }

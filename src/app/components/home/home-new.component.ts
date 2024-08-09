@@ -15,5 +15,8 @@ import {FooterNewComponent} from "../footer/footer-new.component";
   styleUrl: './home-new.component.scss'
 })
 export class HomeNewComponent {
+  constructor() {
+    console.log("im in home now")
+  }
 
 }

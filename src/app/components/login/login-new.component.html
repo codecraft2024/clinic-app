@@ -37,11 +37,13 @@
             <p>login </p>
             <!-- Icon -->
             <!-- Login Form -->
-            <form>
-                <input type="text" id="login" class="fadeIn second " name="person" placeholder=" username ">
-                <input type="text" id="password" class="fadeIn third " name="password" placeholder="password ">
+            <form (ngSubmit)="onLogin()">
+                <input type="text" id="login" class="fadeIn second " name="person" placeholder=" username " [(ngModel)]="userLoginModel.username">
+                <input type="text" id="password" class="fadeIn third " name="password" placeholder="password " [(ngModel)]="userLoginModel.password">
+                <button  (click)="onLogin()">login</button>
+                <div *ngIf="errorMessage" class="error-message">{{ errorMessage }}</div>
             </form>
-            <button (click)="onLogin()">login</button>
+
         </div>
     </div>
 </div>

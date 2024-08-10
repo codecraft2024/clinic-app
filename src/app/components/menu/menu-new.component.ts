@@ -7,8 +7,12 @@ import { Component } from '@angular/core';
   templateUrl: './menu-new.component.html',
   styleUrls: ['./menu-new.component.scss']
 
+
 })
 export class MenuNewComponent {
+
+
+
   isSidebarClosed: boolean = false;
 
   toggleSidebar() {

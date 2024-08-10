@@ -1,6 +1,11 @@
 /* You can add global styles to this file, and also import other style files */
 html {
-    background-color: #F7F8FA;
+    background-color: #F7F8FA !important;
+    font-family:  sans-serif;
+}
+
+body {
+    background-color: #F7F8FA !important;
     font-family:  sans-serif;
 }
 
@@ -20,3 +25,5 @@ html {
 .mr2{
     margin-right: 1rem;
 }  
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

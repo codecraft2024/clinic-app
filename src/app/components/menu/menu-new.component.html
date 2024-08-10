@@ -1,12 +1,12 @@
 <div class="d-flex">
 
-    <div>
-        <button class="sidebar-toggle" (click)="toggleSidebar()">Toggle</button>
 
-    </div>
     <div class="sidebar" [class.closed]="isSidebarClosed">
 
+        <div>
+            <button class="sidebar-toggle" (click)="toggleSidebar()">Toggle</button>
 
+        </div>
         <ul class="sidebar-nav"  >
             <div>
 <!--                <span  >MAIN MENU </span>-->
@@ -36,6 +36,113 @@
             </div>
         </ul>
 
+    </div>
+
+
+    <div class="container mt-4">
+        <!-- Row for the 3 Cards -->
+
+        <div class="good-morning-blk">
+
+
+
+            <div class="row  ">
+                <div class="col-md-6 ">
+                    <div class="morning-user">
+                        <h2>Good Morning, <span>Daniel Bruk</span></h2>
+                        <div class =" d-flex">
+                            <p>
+                            <i class="material-icons"> check_circle</i>
+                            </p> <span>Your last login was on Thursday 27 May, 2021 at 12:33 PM</span>
+
+<!--                        <div class="counter">-->
+<!--                            <span id="minutes">00</span>:<span id="seconds">00</span>-->
+<!--                        </div>-->
+</div>
+
+
+                    </div>
+                </div>
+                <div class="col-md-6 position-blk">
+                    <div class="morning-img">
+<!--                        <img src="/assets/Dental-Schedule2.png" alt="Menu Icon" class="logo">-->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Card 1</h5>
+                        <p class="card-text">Content for Card 1</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Card 2</h5>
+                        <p class="card-text">Content for Card 2</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Card 3</h5>
+                        <p class="card-text">Content for Card 3</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Row for the Table -->
+        <div class="row mt-4">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Data Table</h5>
+                        <table class="table table-striped">
+                            <thead>
+                            <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">First</th>
+                                <th scope="col">Last</th>
+                                <th scope="col">Handle</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <th scope="row">1</th>
+                                <td>Mark</td>
+                                <td>Otto</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">2</th>
+                                <td>Jacob</td>
+                                <td>Thornton</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">3</th>
+                                <td>Larry</td>
+                                <td>the Bird</td>
+                                <td></td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
 

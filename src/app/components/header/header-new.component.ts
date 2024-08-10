@@ -15,15 +15,21 @@ import {Router} from "@angular/router";
 })
 export class HeaderNewComponent {
 
-    constructor(protected authService:AuthService, private router: Router) {
+    constructor(protected authServie:AuthService, private router: Router) {
 
     }
 
     onLogout() {
         console.log("on cancel")
-        this.authService.clearAuthToken()
+        this.authServie.clearAuthToken()
         this.router.navigate(['']);
 
+    }
+
+    toggleSidebar() {
+        console.log("im in toggle side bar")
+        console.log("isSidebarClosed: "+this.authServie.isSidebarClosed)
+        this.authServie.isSidebarClosed = !this.authServie.isSidebarClosed;
     }
 
 

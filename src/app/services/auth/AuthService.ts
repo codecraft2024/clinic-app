@@ -8,6 +8,8 @@ import {LoggedInUserModel} from "../../components/login/LoggedInUserModel";
 export class AuthService {
     private authTokenKey = 'authToken';
     private loggedInUser:LoggedInUserModel = new LoggedInUserModel();
+
+    public isSidebarClosed:boolean = false;
     constructor(private storageService: StorageService) {}
 
     isLoggedIn(): boolean {

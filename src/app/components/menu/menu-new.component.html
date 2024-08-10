@@ -1,35 +1,30 @@
 <div class="d-flex">
 
 
-    <div class="sidebar" [class.closed]="isSidebarClosed">
+    <div class="sidebar" [class.closed]="this.authServie.isSidebarClosed">
 
-        <div>
-            <button class="sidebar-toggle" (click)="toggleSidebar()">Toggle</button>
 
-        </div>
-        <ul class="sidebar-nav"  >
+        <ul class="sidebar-nav">
             <div>
-<!--                <span  >MAIN MENU </span>-->
-                <li class=""> <a class="active">
+                <li class=""><a class="active">
                     <i class="material-icons mr2 ">dashboard</i>Dashboard
-                </a> </li>
-                <li> <a>
+                </a></li>
+                <li><a>
                     <i class="material-icons mr2">event_seat</i>Reservations</a>
                 </li>
                 <li>
                     <a>
                         <i class="material-icons mr2">description</i>Invoices
-                    </a> </li>
-                <li> <a>
+                    </a></li>
+                <li><a>
                     <i class="material-icons mr2">contact_page</i>Applocations
                 </a></li>
             </div>
             <div style="margin-top: 2.5rem;">
-<!--                <span>SECOND MENU </span>-->
-                <li class=""> <a class="">
+                <li class=""><a class="">
                     <i class="material-icons mr2 ">account_circle</i>Users
-                </a> </li>
-                <li> <a>
+                </a></li>
+                <li><a>
                     <i class="material-icons mr2">settings</i>Settings</a>
                 </li>
 
@@ -40,39 +35,32 @@
 
 
     <div class="container mt-4">
-        <!-- Row for the 3 Cards -->
 
         <div class="good-morning-blk">
-
-
-
             <div class="row  ">
                 <div class="col-md-6 ">
                     <div class="morning-user">
-                        <h2>Good Morning, <span> {{this.authServie.getLoggedInUser().fullName}} </span></h2>
-                        <div class =" d-flex">
+                        <h2>Good Morning, <span> {{ this.authServie.getLoggedInUser().fullName }} </span></h2>
+                        <div class=" d-flex">
                             <p>
-                            <i class="material-icons"> check_circle</i>
+                                <i class="material-icons"> check_circle</i>
                             </p> <span>Your last login was on {{ formattedDate }}</span>
 
-<!--                        <div class="counter">-->
-<!--                            <span id="minutes">00</span>:<span id="seconds">00</span>-->
-<!--                        </div>-->
-</div>
+                            <!--                        <div class="counter">-->
+                            <!--                            <span id="minutes">00</span>:<span id="seconds">00</span>-->
+                            <!--                        </div>-->
+                        </div>
 
 
                     </div>
                 </div>
                 <div class="col-md-6 position-blk">
                     <div class="morning-img">
-<!--                        <img src="/assets/Dental-Schedule2.png" alt="Menu Icon" class="logo">-->
+                        <!--                        <img src="/assets/Dental-Schedule2.png" alt="Menu Icon" class="logo">-->
                     </div>
                 </div>
             </div>
         </div>
-
-
-
 
         <div class="row">
             <div class="col-md-4">
@@ -102,8 +90,6 @@
                 </div>
             </div>
         </div>
-
-        <!-- Row for the Table -->
         <div class="row mt-4">
             <div class="col-12">
                 <div class="card">

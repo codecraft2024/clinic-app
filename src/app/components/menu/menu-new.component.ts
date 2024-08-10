@@ -13,15 +13,10 @@ import { enGB } from 'date-fns/locale';
 })
 export class MenuNewComponent {
     formattedDate: string;
-    isSidebarClosed: boolean = false;
 
     constructor(protected authServie: AuthService) {
         const now = new Date(); // Replace this with your LocalDateTime if needed
         this.formattedDate = format(now, "EEEE d MMMM, yyyy 'at' h:mm a", {locale: enGB});
     }
 
-
-    toggleSidebar() {
-        this.isSidebarClosed = !this.isSidebarClosed;
-    }
 }

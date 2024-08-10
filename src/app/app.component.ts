@@ -10,7 +10,7 @@ import { LoginNewComponent } from './components/login/login-new.component';
   standalone: true,
   imports: [RouterOutlet, HeaderNewComponent, FooterNewComponent,MenuNewComponent,LoginNewComponent],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrl: './app.component.scss'
 })
 export class AppComponent {
 

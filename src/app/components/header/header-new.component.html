@@ -1,10 +1,10 @@
 <div class="header-container">
-    <div class="menu header-icon mr1">
-        <i class="material-icons">menu</i>
+    <div class="menu header-icon mr1"  [class.closed]="this.authServie.isSidebarClosed">
+        <button class="material-icons" (click)="toggleSidebar()">menu</button>
     </div>
     <div class="logo ">
 
-        <img src="/assets/icon/menu/logo.png" alt="Menu Icon" class="logo">
+        <img src="/assets/icon/menu/logo.png" alt="Menu Icon"  class="logo">
 
     </div>
     <div class="search">
@@ -24,7 +24,7 @@
     </div>
     <div class="profile d-flex "> <div class=" dc-userimg  "> <img src="/assets/icon/menu/Ellipse-993.png" alt="Menu Icon" class=""></div>
 
-        <span classe="m2" > {{this.authService.getLoggedInUser().username}}</span></div>
+        <span classe="m2" > {{this.authServie.getLoggedInUser().username}}</span></div>
     <div class="notifcations header-icon mr1">
         <i class="material-icons submit-button">notifications</i>
     </div>

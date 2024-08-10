@@ -15,7 +15,7 @@ import {Router} from "@angular/router";
 })
 export class HeaderNewComponent {
 
-    constructor(private authService:AuthService, private router: Router) {
+    constructor(protected authService:AuthService, private router: Router) {
 
     }
 

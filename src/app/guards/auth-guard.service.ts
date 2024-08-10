@@ -11,7 +11,7 @@ export class AuthGuard implements CanActivate{
 
 
     canActivate(): boolean {
-        console.log("canActivate"+this.authService.isLoggedIn());
+
 
         if (this.authService.isLoggedIn()) {
             return true;

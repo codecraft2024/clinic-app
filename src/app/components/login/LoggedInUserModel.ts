@@ -1,0 +1,12 @@
+export class LoggedInUserModel {
+    username: string = '';
+    password: string = '';
+
+    fullName:String = "Geroge Sorial";
+
+
+
+    isValid(): boolean {
+        return this.username === 'george' && this.password === 'admin';
+    }
+}

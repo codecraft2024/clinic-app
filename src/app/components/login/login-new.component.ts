@@ -2,7 +2,7 @@ import {Component} from '@angular/core';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {Router} from '@angular/router';
 import {NgIf, NgOptimizedImage} from "@angular/common";
-import {UserLoginModel} from "./UserLoginModel";
+import {LoggedInUserModel} from "./LoggedInUserModel";
 import {AuthService} from "../../services/auth/AuthService";
 
 @Component({
@@ -19,7 +19,7 @@ import {AuthService} from "../../services/auth/AuthService";
 })
 export class LoginNewComponent {
 
-    userLoginModel: UserLoginModel = new UserLoginModel();
+    userLoginModel: LoggedInUserModel = new LoggedInUserModel();
     errorMessage: String = ""
 
     constructor(private authService:AuthService, private router: Router) {
@@ -30,6 +30,7 @@ export class LoginNewComponent {
         console.log("in submit login")
         if(this.userLoginModel.isValid()){
             this.authService.setAuthToken("token from backend ");
+            this.authService.setLoggedInUser(this.userLoginModel);
             this.router.navigate(['/home']);
             console.log("i will go to the home now")
         }else{

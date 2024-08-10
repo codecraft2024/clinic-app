@@ -1,25 +1,27 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
 import {AuthService} from "../../services/auth/AuthService";
-
+import { format } from 'date-fns';
+import { enGB } from 'date-fns/locale';
 @Component({
-  selector: 'app-menu-new',
-  standalone: true,
-  imports: [],
-  templateUrl: './menu-new.component.html',
-  styleUrls: ['./menu-new.component.scss']
+    selector: 'app-menu-new',
+    standalone: true,
+    imports: [],
+    templateUrl: './menu-new.component.html',
+    styleUrls: ['./menu-new.component.scss']
 
 
 })
 export class MenuNewComponent {
+    formattedDate: string;
+    isSidebarClosed: boolean = false;
 
- constructor(protected  authServie:AuthService) {
- }
+    constructor(protected authServie: AuthService) {
+        const now = new Date(); // Replace this with your LocalDateTime if needed
+        this.formattedDate = format(now, "EEEE d MMMM, yyyy 'at' h:mm a", {locale: enGB});
+    }
 
 
-
-  isSidebarClosed: boolean = false;
-
-  toggleSidebar() {
-    this.isSidebarClosed = !this.isSidebarClosed;
-  }
+    toggleSidebar() {
+        this.isSidebarClosed = !this.isSidebarClosed;
+    }
 }

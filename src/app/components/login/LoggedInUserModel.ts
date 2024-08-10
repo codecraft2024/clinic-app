@@ -7,6 +7,6 @@ export class LoggedInUserModel {
 
 
     isValid(): boolean {
-        return this.username === 'george' && this.password === 'admin';
+        return this.username === 'admin' && this.password === 'admin';
     }
 }

@@ -28,7 +28,7 @@
                 <h5 class="mb-0">Appointment</h5>
             </div>
             <div class="col-sm-12  col-md-4">
-                <div class="d-grid"><a class="btn btn-primary" href="/doctor-appointment">Appointment</a></div>
+                <div class="d-grid"><a class="btn btn-primary" >Appointment</a></div>
             </div>
         </div>
         <div class="row">
@@ -52,7 +52,7 @@
                         <tr *ngFor="let appointment of appointments">
                             <th class="p-3">{{ appointment.id }}</th>
                             <td class="p-3">
-                                <a class="text-dark" href="/doctor-appointment">
+                                <a class="text-dark" >
                                     <div class="d-flex align-items-center">
                                         <span class="ms-2">{{ appointment.name }}</span>
                                     </div>
@@ -63,7 +63,7 @@
                             <td class="p-3">{{ appointment.phone }}</td>
                             <td class="p-3">{{ appointment.datetime }}</td>
                             <td class="p-3">
-                                <a class="text-dark" href="/doctor-appointment">
+                                <a class="text-dark" >
                                     <div class="d-flex align-items-center">
                                         <img [src]="appointment.doctorImage" class="avatar avatar-md-sm rounded-circle border shadow mr-2" alt="">
                                         <span class="ms-2">{{ appointment.doctor }}</span>
@@ -83,11 +83,11 @@
                 <div class="d-md-flex align-items-center text-center justify-content-between">
                     <span class="text-muted me-3">Showing 1 - {{ appointments.length }} out of {{ appointments.length }}</span>
                     <ul class="pagination justify-content-center mb-0 mt-3 mt-sm-0">
-                        <li class="page-item"><a class="page-link" aria-label="Previous" href="/doctor-appointment">Prev</a></li>
-                        <li class="page-item active"><a class="page-link" href="/doctor-appointment">1</a></li>
-                        <li class="page-item"><a class="page-link" href="/doctor-appointment">2</a></li>
-                        <li class="page-item"><a class="page-link" href="/doctor-appointment">3</a></li>
-                        <li class="page-item"><a class="page-link" aria-label="Next" href="/doctor-appointment">Next</a></li>
+                        <li class="page-item"><a class="page-link" aria-label="Previous" >Prev</a></li>
+                        <li class="page-item active"><a class="page-link" >1</a></li>
+                        <li class="page-item"><a class="page-link" >2</a></li>
+                        <li class="page-item"><a class="page-link" >3</a></li>
+                        <li class="page-item"><a class="page-link" aria-label="Next" >Next</a></li>
                     </ul>
                 </div>
             </div>
@@ -106,7 +106,7 @@
                             <div class="dropdown" [ngClass]="{'show': isDropdownOpen}">
                                 <input type="text" class="form-control dropdown-input" [value]="selectedOption" placeholder="Select an option" readonly (click)="toggleDropdown()">
                                 <div class="dropdown-menu">
-                                    <a class="dropdown-item" *ngFor="let option of dropdownOptions" href="#" (click)="selectOption(option.toString())">{{ option.label }}</a>
+                                    <a class="dropdown-item" *ngFor="let option of dropdownOptions" (click)="selectOption(option.toString())">{{ option.label }}</a>
                                 </div>
                             </div>
                         </div>

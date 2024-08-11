@@ -1,32 +1,40 @@
 /* You can add global styles to this file, and also import other style files */
 html {
     background-color: #F7F8FA !important;
-    font-family:  sans-serif;
+    font-family: sans-serif;
 }
 
 body {
     background-color: #F7F8FA !important;
-    font-family:  sans-serif;
+    font-family: sans-serif;
 }
 
-.material-icons{
-    
+.material-icons {
+
     font-size: 24px; /* Change the size */
-    color: #C3CAD9;     /* Change the color */
+    color: #C3CAD9; /* Change the color */
 }
-.mr1{
+
+.mr1 {
     margin-right: 0.5rem;
 }
 
-.m2{
+.m2 {
     margin: 1rem;
 }
 
-.mr2{
+.mr2 {
     margin-right: 1rem;
-}  
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}
 
 /* Main Sidebar Styling */
 .sidebar {
@@ -36,7 +44,7 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
     padding: 0 1rem;
     flex-direction: column;
     align-items: flex-start;
-    background: var(--Gray-Blue-Grey-Blue-98, #F7F8FA);
+    background:  #F7F8FA;
     transition: width 0.4s ease, padding 0.4s ease, opacity 0.4s ease; /* Smoother transitions */
 }
 
@@ -70,7 +78,7 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
 /* General Text Styling */
 span {
-    color: var(--Gray-Blue-Grey-Blue-70, #7D8FB3);
+    color:  #7D8FB3;
     font-size: 0.85rem;
     font-style: normal;
     font-weight: 900;
@@ -114,7 +122,7 @@ span {
     color: #3EC1CD !important;
     line-height: 2.5625rem !important;
     border-radius: 0.625rem;
-    background: var(--White-White, #FFF);
+    background: #FFFFFF;
     box-shadow: 0px 2px 5px 0px rgba(38, 51, 77, 0.03);
 }
 
@@ -149,9 +157,10 @@ span {
         transform: none; /* Reset transform for mobile view */
     }
 
-    .mt-4{
-       margin-top:  2rch;
+    .mt-4 {
+        margin-top: 2rch;
     }
+
     .sidebar.closed {
         width: 0;
 
@@ -214,28 +223,31 @@ span {
 }
 
 
-.breadcrumb{
+.breadcrumb {
     background-color: #f7f8fa !important;
 }
 
 .bg-primary-subtle {
-    background-color: var(--bs-primary-bg-subtle) !important;
+    background-color: #e9ecef !important;
 }
 
 .morning-user {
     padding: 4px 0px 25px 25px;
 }
+
 .morning-user h2 {
     font-size: 26px;
     margin-bottom: 0;
     font-weight: 900;
 }
+
 .morning-user h2 span {
 
     font-size: 26px;
     line-height: 2rem;
     color: #164768;
 }
+
 .morning-user p {
     font-size: 15px;
     font-weight: 500;
@@ -243,18 +255,22 @@ span {
     margin-bottom: 0;
     display: flex;
 }
+
 .morning-user p .material-icons {
 
-    color:#10BD67;
-    margin-right:4px
+    color: #10BD67;
+    margin-right: 4px
 }
+
 .position-blk {
     position: relative;
 }
+
 .morning-img img {
     position: absolute;
     bottom: 0;
 }
+
 .good-morning-blk {
     border-radius: 12px;
     position: relative;
@@ -283,7 +299,7 @@ span {
     padding: .5rem .75rem;
     margin-left: -1px;
     line-height: 1.25;
-    color: #3EC1CD ;
+    color: #3EC1CD;
     background-color: #fff;
     border: 1px solid #dee2e6;
 }
@@ -293,17 +309,19 @@ span {
     border-radius: 50px; /* Rounded corners for pagination container */
 
 }
-.page-item:first-child .page-link{
+
+.page-item:first-child .page-link {
     border-top-left-radius: 50px;
     border-bottom-left-radius: 50px;
 }
 
-.page-item:last-child .page-link{
+.page-item:last-child .page-link {
 
 
     border-top-right-radius: 50px;
     border-bottom-right-radius: 50px;
 }
+
 .pagination .page-item {
     border-radius: 50px; /* Rounded corners for pagination items */
 }
@@ -321,3 +339,5 @@ span {
 .pagination .page-item.active .page-link {
 
 }
+
+

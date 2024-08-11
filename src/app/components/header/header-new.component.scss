@@ -44,8 +44,8 @@
 }
 
 .header-icon{
-    width: 40px;
-    height: 40px;
+    width: 51px !important;
+    height: 51px!important;
     padding: 10px;
     background-color: #fff;
     box-shadow: 0px 2px 5px 0px rgba(38, 51, 77, 0.03);
@@ -92,4 +92,12 @@ button:focus {
     font-weight: 700;
     line-height: 2.9rem;
     margin:0 16px
+}
+
+@media (max-width: 768px) {
+    .header-container .logo,
+    .header-container .search
+    {
+        display: none;
+    }
 }

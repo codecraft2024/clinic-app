@@ -165,3 +165,13 @@
 .dropdown-item:last-child {
   border-bottom: none;
 }
+
+.pending-status {
+  color: #d9534f; /* Bootstrap Danger color */
+  font-weight: 600; /* Slightly bolder text */
+}
+
+.confirmed-status {
+  color: #5cb85c; /* Bootstrap Success color */
+  font-weight: 600; /* Slightly bolder text */
+}

@@ -33,7 +33,7 @@
         <div class="row">
             <div class="col-12 mt-4">
                 <div class="table-responsive bg-white rounded">
-                    <table class="table mb-0 table-center">
+                    <table class="table mb-0 ">
                         <thead>
                         <tr>
                             <th class="border-bottom ">#</th>
@@ -49,28 +49,32 @@
                         </thead>
                         <tbody>
                         <tr *ngFor="let appointment of paginatedAppointments">
-                            <th class="p-3">{{ appointment.id }}</th>
-                            <td class="p-3">
+                            <th class="">{{ appointment.id }}</th>
+                            <td class="">
                                 <a class="text-dark">
                                     <div class="d-flex align-items-center">
                                         <span class="ms-2">{{ appointment.name }}</span>
                                     </div>
                                 </a>
                             </td>
-                            <td class="p-3">{{ appointment.age }}</td>
-                            <td class="p-3">{{ appointment.gender }}</td>
-                            <td class="p-3">{{ appointment.phone }}</td>
-                            <td class="p-3">{{ appointment.datetime }}</td>
-                            <td class="p-3">
+                            <td class="">{{ appointment.age }}</td>
+                            <td class="">{{ appointment.gender }}</td>
+                            <td class="">{{ appointment.phone }}</td>
+                            <td class="">{{ appointment.datetime }}</td>
+                            <td class="">
                                 <a class="text-dark">
                                     <div class="d-flex align-items-center">
-                                        <img [src]="appointment.doctorImage" class="avatar avatar-md-sm rounded-circle border shadow mr-2" alt="">
+                                        <img [src]="appointment.doctorImage"
+                                             class="avatar avatar-md-sm rounded-circle border shadow mr-2" alt="">
                                         <span class="ms-2">{{ appointment.doctor }}</span>
                                     </div>
                                 </a>
                             </td>
-                            <td class="p-3">{{ appointment.payment }}</td>
-                            <td class="p-3">{{ appointment.Status }}</td>
+                            <td class="">{{ appointment.payment }}</td>
+                            <td [ngClass]="{ 'pending-status': appointment.Status === 'Pending',
+                                              'confirmed-status': appointment.Status === 'Confirmed'}">
+                                {{ appointment.Status }}
+                            </td>
                         </tr>
                         </tbody>
                     </table>

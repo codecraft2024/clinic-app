@@ -1,7 +1,8 @@
-<div class="d-flex">
+<div class=" container-fluid d-flex mt-5">
 
 
-    <div class="sidebar" [class.closed]="this.authServie.isSidebarClosed">
+
+    <div class="sidebar closed " [class.closed]="this.authServie.isSidebarClosed">
 
 
         <ul class="sidebar-nav">
@@ -32,7 +33,11 @@
         </ul>
 
     </div>
+
+<div class="col-xl-10 col-lg-8 col-md-8">
     <app-home-content>
     </app-home-content>
+</div>
+
 
 </div>

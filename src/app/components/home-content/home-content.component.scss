@@ -1,0 +1,165 @@
+/* Ensure the table has rounded corners and shadow */
+.table-responsive {
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+/* Style the table header */
+.table thead th {
+  background-color: #f8f9fa;
+  color: #343a40;
+  text-align: center;
+  border:none!important;
+  box-shadow: 0px -1px 0px 0px #EDF2F7;
+}
+.table td, .table th {
+  padding: .75rem;
+  vertical-align: top;
+  border-top: 1px solid #f8f9fa;
+}
+/* Style the table body cells */
+.table tbody td {
+  border-bottom: none;
+  padding: 1rem;
+  vertical-align: middle;
+}
+.table[_ngcontent-ng-c3510136820] tbody[_ngcontent-ng-c3510136820] tr[_ngcontent-ng-c3510136820]:last-child td[_ngcontent-ng-c3510136820] {
+  border-bottom: 2px solid #f8f9fa;
+}
+.table tbody tr{
+  border:none!important;
+}
+/* Style the table rows on hover */
+.table tbody tr:hover {
+  background-color: rgba(238, 238, 238, 0.76);
+}
+
+/* Style the rounded corners of the table body */
+.table tbody tr:last-child td {
+  border-bottom: 2px solid #dee2e6;
+}
+
+/* Style the last row with rounded bottom corners */
+.table tbody tr:last-of-type td:first-of-type {
+}
+.table tbody tr:last-of-type td:last-of-type {
+}
+
+/* Style the table cells to be more responsive */
+.table img.avatar {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+}
+
+/* Add spacing to the action buttons */
+.table .btn {
+}
+
+/* Enhance button styles */
+.btn-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+}
+
+/* Add transition effects to buttons */
+.btn-icon:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+/* Ensure correct spacing in the table */
+.table-center {
+  text-align: center;
+}
+.appointment{
+
+  padding: 1.5rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 2.5rem;
+  border-radius: 1.5rem;
+  background: var(--Background-White, #FFF);
+  margin: 2rem 0;
+
+  /* 1 */
+  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.08);
+}
+
+
+/* Style for the dropdown container */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Style for the input field */
+.dropdown-input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 0.375rem;
+  border: 1px solid #ced4da;
+  font-size: 1rem;
+  cursor: pointer;
+  background: #fff;
+  box-shadow: 0 0 0.125rem rgba(0, 0, 0, 0.1);
+  transition: border-color 0.15s ease-in-out;
+}
+
+.dropdown-input:focus {
+  border-color: #80bdff;
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem rgba(38, 143, 255, 0.25);
+}
+
+/* Style for the dropdown arrow */
+.dropdown::after {
+  content: "\f0d7"; /* Unicode for down arrow (FontAwesome) */
+  font-family: FontAwesome;
+  font-size: 1rem;
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+/* Style for the dropdown menu */
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  background-color: #fff;
+  border-radius: 0.375rem;
+  box-shadow: 0 0 0.125rem rgba(0, 0, 0, 0.1);
+  top: 100%;
+  left: 0;
+  z-index: 1000;
+  width: 100%;
+}
+
+/* Show dropdown menu when input is focused */
+.dropdown.show .dropdown-menu {
+  display: block;
+}
+
+/* Style for dropdown items */
+.dropdown-item {
+  padding: 10px;
+  color: #212529;
+  text-decoration: none;
+  display: block;
+  border-bottom: 1px solid #dee2e6;
+}
+
+.dropdown-item:hover {
+  background-color: #f8f9fa;
+}
+
+/* Remove border from the last item */
+.dropdown-item:last-child {
+  border-bottom: none;
+}

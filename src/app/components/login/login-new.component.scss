@@ -1,21 +1,31 @@
 .login-bg{
 
-  background:  url(../../../../public/assets/bg/bg.png) no-repeat ;
   display: flex;
-  background-position-x: 17rem;
-  background-position-y: 14rem;
+  background-position-x: center;
+  background-position-y: center;
 
   width: 100vw;
   height: 100vh;
   justify-content: center;
   vertical-align: middle;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  padding: 30px 12px;
+
 
 }
 
+.form-group{
+  margin-bottom: 10px;
+  position: relative;
+  display: grid;
+
+}
 .logo{
   height: 100%;
   width: 180px;
-  margin: 0 1rem;
+  margin: 1rem auto;
 }
 .login-header{
   display: flex;
@@ -23,13 +33,13 @@
   border-bottom: solid 1px #EDEFF2;
 }
 .login-container{
-  margin: auto;
-  width: 25.5rem;
-  height: 31.5rem;
-  border-radius: 20px;
+  width: 450px;
+  padding: 40px;
+  border-radius: 10px;
+  -webkit-box-shadow: 0 0 37px rgba(8, 21, 66, 0.05);
+  box-shadow: 0 0 37px rgba(8, 21, 66, 0.05);
+  margin: 0 auto;
   background-color: #fff;
-  box-shadow:0px 20px 40px #C9D0D3;
-  text-align: center;
 }
 
 .login-form {
@@ -68,55 +78,37 @@ a {
   font-weight: 400;
 }
 
-h2 {
-  text-align: center;
-  font-size: 26px;
-  font-weight: 900;
-  text-transform: uppercase;
-  display:inline-block;
-  margin: 40px 8px 10px 8px;
-  color: #3d3c3c;
-}
+
 
 
 
 /* STRUCTURE */
 
-.wrapper {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  justify-content: center;
-  width: 100%;
-  min-height: 100%;
-  margin: -8rem 8px -8px 17rem}
-
 #formContent {
   -webkit-border-radius: 10px 10px 10px 10px;
   border-radius: 10px 10px 10px 10px;
   background: #fff;
-  padding: 50px 0 !important;
-  width: 90%;
-  height: 504px;
-  max-width: 470px;
+  padding: 50px;
+
   position: relative;
-  padding: 0px;
-  text-align: center;
+
   border: 1px solid #ededf4;
 }
 
-#formFooter {
-  background-color: #f6f6f6;
-  border-top: 1px solid #dce8f1;
-  padding: 25px;
-  text-align: center;
-  -webkit-border-radius: 0 0 10px 10px;
-  border-radius: 0 0 10px 10px;
+p {
+  margin-bottom: 25px;
+  font-size: 14px;
+  color: #898989;
+}
+.label{
+  padding-top: calc(.375rem + var(--bs-border-width));
+  padding-bottom: calc(.375rem + var(--bs-border-width));
+  margin-bottom: 0;
+  font-size: inherit;
+  line-height: 1.5;
 }
 
 
-
-/* TABS */
 
 h2.inactive {
   color: #cccccc;
@@ -127,9 +119,6 @@ h2.active {
   border-bottom: 2px solid #226B86;
 }
 
-
-
-/* FORM TYPOGRAPHY*/
 
 button  {
   background-color: #226B86;
@@ -167,24 +156,23 @@ button:active  {
 }
 
 input[type=text] {
-  background-color: #ffffff;
+  background-color: #f5f7f7;
   border: none;
   color: #0d0d0d;
-  padding: 15px 32px;
+  padding: 16px 16px;
   text-align: left;
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
-  margin: 5px;
-  width: 85%;
-  border: 2px solid #f6f6f6;
+  margin: 0;
+  border: 1px dashed #0c546080;
   -webkit-transition: all 0.5s ease-in-out;
   -moz-transition: all 0.5s ease-in-out;
   -ms-transition: all 0.5s ease-in-out;
   -o-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
   -webkit-border-radius: 5px 5px 5px 5px;
-  border-radius: 32px;
+  border-radius: 8px;
 
 }
 
@@ -315,4 +303,56 @@ input[type=text]:placeholder {
 
 * {
   box-sizing: border-box;
+}
+
+@media screen and (max-width: 430px) {
+
+  .login-container{
+    -webkit-border-radius: 10px 10px 10px 10px;
+    border-radius: 10px 10px 10px 10px;
+    background: #f7f8fa;
+    padding: 0px;
+    width: 100%;
+    position: relative;
+    border: none;
+    box-shadow: none;
+
+  }
+
+  #formContent[_ngcontent-ng-c2898681529] {
+    -webkit-border-radius: 10px 10px 10px 10px;
+    border-radius: 10px 10px 10px 10px;
+    background: #f7f8fa;
+    padding: 24px;
+    width: 100%;
+    position: relative;
+    border: none;
+  }
+  .login-bg{
+
+    display: block;
+
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    vertical-align: middle;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    padding: 10px 0px;
+
+
+  }
+
+  #formContent {
+    -webkit-border-radius: 10px 10px 10px 10px;
+    border-radius: 10px 10px 10px 10px;
+    background: #fff;
+    padding: 0px;
+width: 100%;
+    position: relative;
+
+    border: 1px solid #ededf4;
+  }
+
 }

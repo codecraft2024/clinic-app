@@ -75,7 +75,15 @@
 }
 
 
+button{
+    background: none;
+    border: none;
+}
 
+button:focus {
+    outline: none; /* Removes the focus outline */
+    box-shadow: none; /* Optional: removes any additional shadow applied on focus */
+}
 .profile{
     color: var(--Gray-Blue-Grey-Blue-60, #6B7A99);
     /* Bold/Bold 13 */

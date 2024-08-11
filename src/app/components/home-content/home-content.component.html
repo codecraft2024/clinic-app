@@ -1,5 +1,4 @@
 <div class=" ">
-
     <div class="good-morning-blk">
         <div class="row  ">
             <div class="col-md-6 ">
@@ -20,15 +19,15 @@
             </div>
         </div>
     </div>
-
-
     <div class="appointment">
         <div class="row">
             <div class="col-xl-8 col-lg-4 col-md-4">
                 <h5 class="mb-0">Appointment</h5>
             </div>
             <div class="mr-2">
-                <div class="d-grid"><a class="btn btn-primaryd-flex" > <i class="material-icons" style="color:#fff" href="javascript:void(0);"  > add</i> Add</a></div>
+                <div class="d-grid"><a class="btn btn-primaryd-flex"> <i class="material-icons" style="color:#fff"
+                                                                         href="javascript:void(0);"> add</i> Add</a>
+                </div>
             </div>
         </div>
         <div class="row">
@@ -45,14 +44,14 @@
                             <th class="border-bottom">Date & Time</th>
                             <th class="border-bottom">Doctor</th>
                             <th class="border-bottom">Payment</th>
-                            <th class="border-bottom">Statue</th>
+                            <th class="border-bottom">Status</th>
                         </tr>
                         </thead>
                         <tbody>
-                        <tr *ngFor="let appointment of appointments">
+                        <tr *ngFor="let appointment of paginatedAppointments">
                             <th class="p-3">{{ appointment.id }}</th>
                             <td class="p-3">
-                                <a class="text-dark" >
+                                <a class="text-dark">
                                     <div class="d-flex align-items-center">
                                         <span class="ms-2">{{ appointment.name }}</span>
                                     </div>
@@ -63,7 +62,7 @@
                             <td class="p-3">{{ appointment.phone }}</td>
                             <td class="p-3">{{ appointment.datetime }}</td>
                             <td class="p-3">
-                                <a class="text-dark" >
+                                <a class="text-dark">
                                     <div class="d-flex align-items-center">
                                         <img [src]="appointment.doctorImage" class="avatar avatar-md-sm rounded-circle border shadow mr-2" alt="">
                                         <span class="ms-2">{{ appointment.doctor }}</span>
@@ -78,44 +77,52 @@
                 </div>
             </div>
         </div>
+
         <div class="row text-center">
             <div class="col-12 mt-4">
                 <div class="d-md-flex align-items-center text-center justify-content-between">
-                    <span class="text-muted me-3">Showing 1 - {{ appointments.length }} out of {{ appointments.length }}</span>
+            <span class="text-muted me-3">Showing 1 - {{ appointments.length }}
+                out of {{ appointments.length }}</span>
                     <ul class="pagination justify-content-center mb-0 mt-3 mt-sm-0">
-                        <li class="page-item"><a class="page-link" aria-label="Previous" >Prev</a></li>
-                        <li class="page-item active"><a class="page-link" >1</a></li>
-                        <li class="page-item"><a class="page-link" >2</a></li>
-                        <li class="page-item"><a class="page-link" >3</a></li>
-                        <li class="page-item"><a class="page-link" aria-label="Next" >Next</a></li>
+                        <li class="page-item" [class.disabled]="currentPage === 1">
+                            <a class="page-link" aria-label="Previous" (click)="prevPage()">Prev</a>
+                        </li>
+                        <li *ngFor="let page of totalPages" class="page-item" [class.active]="page === currentPage">
+                            <a class="page-link" (click)="goToPage(page)">{{ page }}</a>
+                        </li>
+                        <li class="page-item" [class.disabled]="currentPage === totalPages.length">
+                            <a class="page-link" aria-label="Next" (click)="nextPage()">Next</a>
+                        </li>
                     </ul>
                 </div>
             </div>
         </div>
     </div>
-<div class="row justify-content-between mb-2 mr-2">
+    <div class="row justify-content-between mb-2 mr-2">
         <div class="col-sm-12 pl-2 col-md-6">
             <h5 class="mb-0 ml-4 "> Doctors</h5>
         </div>
-    <div class="col-xl-4 col-lg-7 col-md-8 mt-4 mt-md-0">
-        <div class="justify-content-end">
-            <form>
-                <div class="row justify-content-end">
-                    <div class="col-sm-12 col-md-5">
-                        <div>
-                            <div class="dropdown" [ngClass]="{'show': isDropdownOpen}">
-                                <input type="text" class="form-control dropdown-input" [value]="selectedOption" placeholder="Select an option" readonly (click)="toggleDropdown()">
-                                <div class="dropdown-menu">
-                                    <a class="dropdown-item" *ngFor="let option of dropdownOptions" (click)="selectOption(option.toString())">{{ option.label }}</a>
+        <div class="col-xl-4 col-lg-7 col-md-8 mt-4 mt-md-0">
+            <div class="justify-content-end">
+                <form>
+                    <div class="row justify-content-end">
+                        <div class="col-sm-12 col-md-5">
+                            <div>
+                                <div class="dropdown" [ngClass]="{'show': isDropdownOpen}">
+                                    <input type="text" class="form-control dropdown-input" [value]="selectedOption"
+                                           placeholder="Select an option" readonly (click)="toggleDropdown()">
+                                    <div class="dropdown-menu">
+                                        <a class="dropdown-item" *ngFor="let option of dropdownOptions"
+                                           (click)="selectOption(option.toString())">{{ option.label }}</a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
 
-                </div>
-            </form>
+                    </div>
+                </form>
+            </div>
         </div>
-    </div>
     </div>
     <div class="row">
         <div class="col-md-4">
@@ -146,7 +153,6 @@
         </div>
     </div>
 </div>
-
 
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">

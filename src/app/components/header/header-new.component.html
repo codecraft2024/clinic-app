@@ -1,24 +1,18 @@
 <div class="header-container   justify-content-between ">
-    <div class="menu header-icon mr1"  [class.closed]="this.authServie.isSidebarClosed">
+    <div class="menu header-icon mr1" [class.closed]="this.authServie.isSidebarClosed">
         <button class="material-icons" (click)="toggleSidebar()">menu</button>
     </div>
     <div class="logo ">
-
-        <img src="/assets/icon/menu/logo.png" alt="Menu Icon"  class="logo">
-
+        <img src="/assets/icon/menu/logo.png" alt="Menu Icon" class="logo">
     </div>
     <div class="search">
 
         <div>
-
             <form class="search-form">
                 <div class="ic10">
                     <i class="material-icons submit-button">search</i>
-
                 </div>
                 <input type="search" value="" placeholder="Search" class="search-input">
-
-
             </form>
         </div>
     </div>
@@ -30,7 +24,7 @@
         <i class="material-icons submit-button">notifications</i>
     </div>
     <div class="logout header-icon mr1" (click)="onLogout()">
-        <i class="material-icons submit-button" >cancel</i>
+        <i class="material-icons submit-button">cancel</i>
     </div>
 
     </div>

@@ -31,22 +31,7 @@
                 <div class="justify-content-end">
                     <form>
                         <div class="row justify-content-end">
-                            <div class="col-sm-12 col-md-5">
-                                <div >
 
-                                <div class="dropdown" [ngClass]="{'show': isDropdownOpen}">
-                                    <input type="text" class="form-control dropdown-input"
-                                           placeholder="Select an option" readonly
-                                           (click)="toggleDropdown()">
-                                    <div class="dropdown-menu">
-                                        <a class="dropdown-item" href="#" (click)="selectOption('Option 1')">Option 1</a>
-                                        <a class="dropdown-item" href="#" (click)="selectOption('Option 2')">Option 2</a>
-                                        <a class="dropdown-item" href="#" (click)="selectOption('Option 3')">Option 3</a>
-                                    </div>
-                                </div>
-
-                                </div>
-                            </div>
                             <div class="col-sm-12 col-md-4 ">
                                 <div class="d-grid"><a class="btn btn-primary" href="/doctor-appointment">Appointment</a></div>
                             </div>
@@ -246,6 +231,27 @@
         </div>
 
 </div>
+
+
+    <div class="row justify-content-between mb-2 mr-2">
+        <div class="col-sm-12 pl-2 col-md-6">
+            <h5 class="mb-0 ml-4 "> Doctors</h5>
+        </div>
+        <div class=" justify-content-end">
+
+                <div class="dropdown" [ngClass]="{'show': isDropdownOpen}">
+                    <input type="text" class="form-control dropdown-input"
+                           placeholder="Select an option" readonly
+                           (click)="toggleDropdown()">
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#" (click)="selectOption('Option 1')">Option 1</a>
+                        <a class="dropdown-item" href="#" (click)="selectOption('Option 2')">Option 2</a>
+                        <a class="dropdown-item" href="#" (click)="selectOption('Option 3')">Option 3</a>
+                    </div>
+                </div>
+
+        </div>
+    </div>
     <div class="row">
         <div class="col-md-4">
             <div class="card">

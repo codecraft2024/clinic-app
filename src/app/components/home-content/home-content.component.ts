@@ -4,6 +4,8 @@ import {enGB} from "date-fns/locale";
 import {AuthService} from "../../services/auth/AuthService";
 import {CommonModule} from '@angular/common';
 import {Appointment, DropdownOption} from "./Appointment";
+import {ModalContentComponent} from "../modal-content/modal-content.component";
+import {MatDialog} from "@angular/material/dialog";
 
 @Component({
     selector: 'app-home-content',
@@ -126,7 +128,7 @@ export class HomeContentComponent {
     ];
     paginatedAppointments: Appointment[] = [];
 
-    constructor(protected authService: AuthService) {
+    constructor(protected authService: AuthService, private dialog: MatDialog) {
         this.formattedDate = format(new Date(), "EEEE d MMMM, yyyy 'at' h:mm a", {locale: enGB});
       this.calculateTotalPages();
       this.updatePaginatedAppointments();
@@ -182,4 +184,13 @@ export class HomeContentComponent {
       this.updatePaginatedAppointments();
     }
   }
+
+
+    openModal() {
+        this.dialog.open(ModalContentComponent, {
+            width: '400px',
+        });
+    }
+
+
 }

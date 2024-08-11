@@ -1,0 +1,48 @@
+<h2 mat-dialog-title>Add Appointment</h2>
+<mat-dialog-content>
+    <form>
+        <mat-form-field appearance="fill">
+            <mat-label>Patient Name</mat-label>
+            <input matInput placeholder="Enter patient name"  >
+        </mat-form-field>
+
+        <mat-form-field appearance="fill">
+            <mat-label>Gender</mat-label>
+            <mat-select  >
+                <mat-option value="Male">Male</mat-option>
+                <mat-option value="Female">Female</mat-option>
+            </mat-select>
+        </mat-form-field>
+
+        <mat-form-field appearance="fill">
+            <mat-label>Phone</mat-label>
+            <input matInput placeholder="Enter phone number"  >
+        </mat-form-field>
+
+
+
+        <mat-form-field appearance="fill">
+            <mat-label>Select Doctor</mat-label>
+            <mat-select>
+                <mat-option value="Scheduled">Dr. Tarun</mat-option>
+                <mat-option value="Completed">Dr. Shame</mat-option>
+                <mat-option value="Cancelled">Dr. Ali</mat-option>
+            </mat-select>
+        </mat-form-field>
+
+
+
+        <mat-form-field appearance="fill">
+            <mat-label>Status</mat-label>
+            <mat-select> <!--[(ngModel)]="appointment.Status"-->
+                <mat-option value="Scheduled">Pending</mat-option>
+                <mat-option value="Completed">Confirmed</mat-option>
+                <mat-option value="Cancelled">Cancelled</mat-option>
+            </mat-select>
+        </mat-form-field>
+    </form>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+    <button mat-button mat-dialog-close>Cancel</button>
+    <button mat-button class="btn btn-primary"> <!--(click)="saveAppointment()" -->Save</button>
+</mat-dialog-actions>

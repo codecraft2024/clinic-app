@@ -27,7 +27,8 @@
               }
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+              "@angular/material/prebuilt-themes/azure-blue.css"
             ],
             "scripts": [],
             "server": "src/main.server.ts",
@@ -90,9 +91,10 @@
               }
             ],
             "styles": [
-              "src/styles.css",
-               "node_modules/material-design-icons/iconfont/material-icons.css"
-  
+              "@angular/material/prebuilt-themes/azure-blue.css",
+              "node_modules/material-design-icons/iconfont/material-icons.css",
+              "src/styles.css"
+
             ],
             "scripts": []
           }

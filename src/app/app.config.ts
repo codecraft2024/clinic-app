@@ -4,7 +4,8 @@ import { provideClientHydration } from '@angular/platform-browser';
 
  import {LoginNewComponent} from "./components/login/login-new.component";
 import {HomeNewComponent} from "./components/home/home-new.component";
-import { AuthGuard } from './guards/auth-guard.service'; // Import the guard
+import { AuthGuard } from './guards/auth-guard.service';
+import { provideAnimationsAsync } from '@angular/platform-browser/animations/async'; // Import the guard
 
 const routes: Routes = [
   { path: '', component: LoginNewComponent },
@@ -15,6 +16,6 @@ export const appConfig: ApplicationConfig = {
   providers: [
     provideZoneChangeDetection({ eventCoalescing: true }),
     provideRouter(routes,withComponentInputBinding()),
-    provideClientHydration(),
+    provideClientHydration(), provideAnimationsAsync(),
   ],
 };

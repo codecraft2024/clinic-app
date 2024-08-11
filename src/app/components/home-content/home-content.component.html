@@ -27,198 +27,61 @@
             <div class="col-xl-8 col-lg-4 col-md-4">
                 <h5 class="mb-0">Appointment</h5>
             </div>
-            <div class="col-xl-4 col-lg-7 col-md-8 mt-4 mt-md-0">
-                <div class="justify-content-end">
-                    <form>
-                        <div class="row justify-content-end">
-
-                            <div class="col-sm-12 col-md-4 ">
-                                <div class="d-grid"><a class="btn btn-primary" href="/doctor-appointment">Appointment</a></div>
-                            </div>
-                        </div>
-                    </form>
-                </div>
+            <div class="col-sm-12  col-md-4">
+                <div class="d-grid"><a class="btn btn-primary" href="/doctor-appointment">Appointment</a></div>
             </div>
         </div>
         <div class="row">
             <div class="col-12 mt-4">
-                <div class="table-responsive bg-white  rounded">
+                <div class="table-responsive bg-white rounded">
                     <table class="table mb-0 table-center">
                         <thead>
                         <tr>
-                            <th class="border-bottom p-3" style="min-width: 50px;">#</th>
-                            <th class="border-bottom p-3" style="min-width: 180px;">Name</th>
+                            <th class="border-bottom p-3">#</th>
+                            <th class="border-bottom p-3">Name</th>
                             <th class="border-bottom p-3">Age</th>
                             <th class="border-bottom p-3">Gender</th>
-                            <th class="border-bottom p-3">mobile number</th>
-                            <th class="border-bottom p-3" style="min-width: 150px;">Date & Time</th>
-                             <th class="border-bottom p-3" style="min-width: 220px;">Doctor</th>
-                            <th class="border-bottom p-3">Fees</th>
+                            <th class="border-bottom p-3">Mobile Number</th>
+                            <th class="border-bottom p-3">Date & Time</th>
+                            <th class="border-bottom p-3">Doctor</th>
+                            <th class="border-bottom p-3">Payment</th>
+                            <th class="border-bottom p-3">Statue</th>
                         </tr>
                         </thead>
                         <tbody>
-                        <tr>
-                            <th class="p-3">1</th>
+                        <tr *ngFor="let appointment of appointments">
+                            <th class="p-3">{{ appointment.id }}</th>
                             <td class="p-3">
                                 <a class="text-dark" href="/doctor-appointment">
                                     <div class="d-flex align-items-center">
-                                        <span class="ms-2">Ahmed Al-Mansoori</span></div>
+                                        <span class="ms-2">{{ appointment.name }}</span>
+                                    </div>
                                 </a>
                             </td>
-                            <td class="p-3">25</td>
-                            <td class="p-3">Male</td>
-                            <td class="p-3">050-1234567</td>
-                            <td class="p-3">16th Sep 2023 11:00AM</td>
-
+                            <td class="p-3">{{ appointment.age }}</td>
+                            <td class="p-3">{{ appointment.gender }}</td>
+                            <td class="p-3">{{ appointment.phone }}</td>
+                            <td class="p-3">{{ appointment.datetime }}</td>
                             <td class="p-3">
                                 <a class="text-dark" href="/doctor-appointment">
                                     <div class="d-flex align-items-center">
-                                        <img src="/assets/icon/menu/dr.png" class="avatar avatar-md-sm rounded-circle border shadow mr-2" alt="">
-                                        <span class="ms-2">Dr. Tarun </span></div>
-
+                                        <img [src]="appointment.doctorImage" class="avatar avatar-md-sm rounded-circle border shadow mr-2" alt="">
+                                        <span class="ms-2">{{ appointment.doctor }}</span>
+                                    </div>
                                 </a>
                             </td>
-                            <td class="p-3">$50/Patient</td>
-
-                        </tr>
-                        <tr>
-                            <th class="p-3">2</th>
-                            <td class="p-3">
-                                <a class="text-dark" href="/doctor-appointment">
-                                    <div class="d-flex align-items-center">
-                                        <span class="ms-2">Fatima Al-Habsi</span></div>
-                                </a>
-                            </td>
-                            <td class="p-3">44</td>
-                            <td class="p-3">Male</td>
-                            <td class="p-3">052-2345678</td>
-                            <td class="p-3">18th Sep 2023 11:00AM</td>
-
-                            <td class="p-3">
-                                <a class="text-dark" href="/doctor-appointment">
-                                    <div class="d-flex align-items-center">
-                                        <img src="/assets/icon/menu/dr.png" class="avatar avatar-md-sm rounded-circle border shadow mr-2" alt="">
-                                        <span class="ms-2">Dr. Tarun</span></div>
-
-                                </a>
-                            </td>
-                            <td class="p-3">$50/Patient</td>
-
-                        </tr>
-                        <tr>
-                            <th class="p-3">3</th>
-                            <td class="p-3">
-                                <a class="text-dark" href="/doctor-appointment">
-                                    <div class="d-flex align-items-center">
-                                        <span class="ms-2">mohamed Al-Sheikh</span></div>
-
-
-                                </a>
-                            </td>
-                            <td class="p-3">30</td>
-                            <td class="p-3">Male</td>
-                            <td class="p-3">055-3456789</td>
-                            <td class="p-3">20th Sep 2023 12:00AM</td>
-
-                            <td class="p-3">
-                                <a class="text-dark" href="/doctor-appointment">
-                                    <div class="d-flex align-items-center">
-                                        <img src="/assets/icon/menu/dr.png" class="avatar avatar-md-sm rounded-circle border shadow mr-2" alt="">
-                                        <span class="ms-2">Dr. Tarun</span></div>
-
-                                </a>
-                            </td>
-                            <td class="p-3">$50/Patient</td>
-
-                        </tr>
-                        <tr>
-                            <th class="p-3">4</th>
-                            <td class="p-3">
-                                <a class="text-dark" href="/doctor-appointment">
-                                    <div class="d-flex align-items-center">
-                                        <span class="ms-2">Amira ibrahim sayed</span></div>
-
-
-                                </a>
-                            </td>
-                            <td class="p-3">30</td>
-                            <td class="p-3">Male</td>
-                            <td class="p-3">058-4567890</td>
-                            <td class="p-3">19th Sep 2023 11:00AM</td>
-
-                            <td class="p-3">
-                                <a class="text-dark" href="/doctor-appointment">
-                                    <div class="d-flex align-items-center">
-                                        <img src="/assets/icon/menu/dr.png" class="avatar avatar-md-sm rounded-circle border shadow mr-2" alt="">
-                                        <span class="ms-2">Dr. Tarun</span></div>
-
-                                </a>
-                            </td>
-                            <td class="p-3">$50/Patient</td>
-
-                        </tr>
-                        <tr>
-                            <th class="p-3">5</th>
-                            <td class="p-3">
-                                <a class="text-dark" href="/doctor-appointment">
-                                    <div class="d-flex align-items-center">
-                                        <span class="ms-2">Aisha Al-Sheikh</span></div>
-
-
-                                </a>
-                            </td>
-                            <td class="p-3">30</td>
-                            <td class="p-3">Male</td>
-                            <td class="p-3">054-5678901</td>
-                            <td class="p-3">24th Sep 2023 10:00AM</td>
-                            <td class="p-3">
-                                <a class="text-dark" href="/doctor-appointment">
-                                    <div class="d-flex align-items-center">
-                                        <img src="/assets/icon/menu/dr.png" class="avatar avatar-md-sm rounded-circle border shadow mr-2" alt="">
-                                        <span class="ms-2">Dr. Tarun</span></div>
-
-                                </a>
-                            </td>
-                            <td class="p-3">$50/Patient</td>
-
-                        </tr>
-                        <tr>
-                            <th class="p-3">6</th>
-                            <td class="p-3">
-                                <a class="text-dark" href="/doctor-appointment">
-                                    <div class="d-flex align-items-center">
-                                        <span class="ms-2">mohamad el rashed</span></div>
-
-
-                                </a>
-                            </td>
-                            <td class="p-3">30</td>
-                            <td class="p-3">Male</td>
-                            <td class="p-3">054-5678901</td>
-                            <td class="p-3">28th Sep 2023 8:00AM</td>
-
-                            <td class="p-3">
-                                <a class="text-dark"  >
-                                    <div class="d-flex align-items-center">
-                                        <img src="/assets/icon/menu/dr.png" class="avatar avatar-md-sm rounded-circle border shadow mr-2" alt="">
-                                        <span class="ms-2">Dr. Sham</span></div>
-
-                                </a>
-                            </td>
-                            <td class="p-3">$50/Patient</td>
-
+                            <td class="p-3">{{ appointment.payment }}</td>
+                            <td class="p-3">{{ appointment.Status }}</td>
                         </tr>
                         </tbody>
                     </table>
                 </div>
             </div>
         </div>
-
-
         <div class="row text-center">
             <div class="col-12 mt-4">
                 <div class="d-md-flex align-items-center text-center justify-content-between">
-                    <span class="text-muted me-3">Showing 1 - 6 out of 6</span>
+                    <span class="text-muted me-3">Showing 1 - {{ appointments.length }} out of {{ appointments.length }}</span>
                     <ul class="pagination justify-content-center mb-0 mt-3 mt-sm-0">
                         <li class="page-item"><a class="page-link" aria-label="Previous" href="/doctor-appointment">Prev</a></li>
                         <li class="page-item active"><a class="page-link" href="/doctor-appointment">1</a></li>
@@ -229,28 +92,30 @@
                 </div>
             </div>
         </div>
-
-</div>
-
-
-    <div class="row justify-content-between mb-2 mr-2">
+    </div>
+<div class="row justify-content-between mb-2 mr-2">
         <div class="col-sm-12 pl-2 col-md-6">
             <h5 class="mb-0 ml-4 "> Doctors</h5>
         </div>
-        <div class=" justify-content-end">
-
-                <div class="dropdown" [ngClass]="{'show': isDropdownOpen}">
-                    <input type="text" class="form-control dropdown-input"
-                           placeholder="Select an option" readonly
-                           (click)="toggleDropdown()">
-                    <div class="dropdown-menu">
-                        <a class="dropdown-item" href="#" (click)="selectOption('Option 1')">Option 1</a>
-                        <a class="dropdown-item" href="#" (click)="selectOption('Option 2')">Option 2</a>
-                        <a class="dropdown-item" href="#" (click)="selectOption('Option 3')">Option 3</a>
+    <div class="col-xl-4 col-lg-7 col-md-8 mt-4 mt-md-0">
+        <div class="justify-content-end">
+            <form>
+                <div class="row justify-content-end">
+                    <div class="col-sm-12 col-md-5">
+                        <div>
+                            <div class="dropdown" [ngClass]="{'show': isDropdownOpen}">
+                                <input type="text" class="form-control dropdown-input" [value]="selectedOption" placeholder="Select an option" readonly (click)="toggleDropdown()">
+                                <div class="dropdown-menu">
+                                    <a class="dropdown-item" *ngFor="let option of dropdownOptions" href="#" (click)="selectOption(option.toString())">{{ option.label }}</a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                </div>
 
+                </div>
+            </form>
         </div>
+    </div>
     </div>
     <div class="row">
         <div class="col-md-4">

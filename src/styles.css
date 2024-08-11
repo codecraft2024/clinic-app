@@ -28,8 +28,7 @@ body {
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
-
-
+/* Main Sidebar Styling */
 .sidebar {
     display: flex;
     width: 17.625rem; /* Expanded sidebar width */
@@ -39,9 +38,9 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
     align-items: flex-start;
     background: var(--Gray-Blue-Grey-Blue-98, #F7F8FA);
     transition: width 0.4s ease, padding 0.4s ease, opacity 0.4s ease; /* Smoother transitions */
-
 }
 
+/* Collapsed Sidebar Styling */
 .sidebar.closed {
     width: 75px; /* Collapsed sidebar width */
     overflow: hidden;
@@ -52,14 +51,8 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
     transition: width 0.4s ease, padding-right 0.4s ease; /* Ensure padding-right transitions smoothly */
 }
 
-.sidebar.closed i.material-icons {
-    background-color: #ffffff; /* Icon background color */
-    border-radius: 50%; /* Rounded background */
-    padding: 10px; /* Padding to create circle */
-    transition: background-color 0.4s ease, color 0.4s ease; /* Smooth transition for background color and icon color */
-    color: #7D8FB3; /* Default icon color */
-}
-
+/* Sidebar Icon Styling */
+.sidebar.closed i.material-icons,
 .sidebar i.material-icons {
     background-color: #ffffff; /* Icon background color */
     border-radius: 50%; /* Rounded background */
@@ -68,14 +61,14 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
     color: #7D8FB3; /* Default icon color */
 }
 
-
+/* Hide Text When Sidebar is Collapsed */
 .sidebar.closed span {
     opacity: 0; /* Hide text */
     visibility: hidden; /* Make text invisible */
     transition: opacity 0.4s ease, visibility 0.4s ease; /* Smooth transition for opacity and visibility */
 }
 
-
+/* General Text Styling */
 span {
     color: var(--Gray-Blue-Grey-Blue-70, #7D8FB3);
     font-size: 0.85rem;
@@ -85,6 +78,7 @@ span {
     transition: opacity 0.4s ease, visibility 0.4s ease; /* Smooth transition for opacity and visibility */
 }
 
+/* Sidebar Navigation */
 .sidebar-nav {
     list-style-type: none;
     width: 100%;
@@ -113,13 +107,14 @@ span {
     color: #575757;
 }
 
+/* Active Link Styling */
 .active {
     display: flex;
     align-items: center;
     color: #3EC1CD !important;
     line-height: 2.5625rem !important;
     border-radius: 0.625rem;
-    background: #fff;
+    background: var(--White-White, #FFF);
     box-shadow: 0px 2px 5px 0px rgba(38, 51, 77, 0.03);
 }
 
@@ -133,31 +128,90 @@ span {
     color: #3EC1CD;
 }
 
+/* Main Content */
 .main-content {
-    margin-left: 20.625rem; /* Adjusted to match sidebar width */
+    margin-left: 17.625rem; /* Adjusted to match expanded sidebar width */
     padding: 20px;
     transition: margin-left 0.4s ease; /* Smooth transition */
 }
 
 .sidebar.closed ~ .main-content {
+    margin-left: 75px; /* Adjusted to match collapsed sidebar width */
 }
 
+/* Responsive Adjustments */
 @media screen and (max-width: 768px) {
     .sidebar {
-        width: 100%;
-        height: auto;
-        position: relative;
+        width: 60%; /* Full width on smaller screens */
+        height: auto; /* Height adjusts to content */
+        position: relative; /* Relative position for stacking */
+        padding: 0; /* Reset padding */
         transform: none; /* Reset transform for mobile view */
     }
 
+    .mt-4{
+       margin-top:  2rch;
+    }
+    .sidebar.closed {
+        width: 0;
+
+        padding: 0;
+        padding-right: 0;
+        border: none;
+        margin: 0;
+    }
+
+
     .sidebar-nav {
-        text-align: center;
+        text-align: center; /* Center navigation items */
+        display: flex;
+        flex-direction: row; /* Make navigation items horizontal */
+        justify-content: space-around; /* Evenly space items */
+    }
+
+    .sidebar-nav li {
+        margin: 0.5rem 0;
+    }
+
+    .sidebar-nav li a {
+        padding: 0.75rem; /* Adjust padding for smaller screens */
+        font-size: 0.875rem; /* Slightly smaller font */
+    }
+
+    .sidebar.closed span {
+        opacity: 1; /* Ensure text is visible */
+        visibility: visible; /* Ensure text is visible */
     }
 
     .main-content {
+        margin-left: 0; /* Remove left margin */
+        padding-top: 60px; /* Adjust padding if necessary */
+    }
+
+    .icon-bar {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 10px;
     }
 }
 
+@media screen and (max-width: 480px) {
+
+
+    .sidebar-nav {
+        flex-direction: column; /* Stack navigation items vertically */
+    }
+
+    .sidebar-nav li {
+        margin: 0.25rem 0; /* Reduce margin for smaller screens */
+    }
+
+    .sidebar-nav li a {
+        padding: 0.5rem; /* Further reduce padding */
+    }
+}
 
 
 .breadcrumb{
@@ -165,7 +219,7 @@ span {
 }
 
 .bg-primary-subtle {
-    background-color: #eee !important;
+    background-color: var(--bs-primary-bg-subtle) !important;
 }
 
 .morning-user {
@@ -179,7 +233,8 @@ span {
 .morning-user h2 span {
 
     font-size: 26px;
-    color: #2E37A4;
+    line-height: 2rem;
+    color: #164768;
 }
 .morning-user p {
     font-size: 15px;
@@ -202,7 +257,67 @@ span {
 }
 .good-morning-blk {
     border-radius: 12px;
-    margin-bottom: 25px;
     position: relative;
     z-index: 9;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #3EC1CD !important;
+    border-color: #3EC1CD !important;
+    border-radius: 32px;
+
+}
+
+.page-item.active .page-link {
+    z-index: 3;
+    color: #fff;
+    background-color: #3EC1CD !important;
+    border-color: #3EC1CD !important;
+    border-radius: 50px;
+}
+
+.page-link {
+    position: relative;
+    display: block;
+    padding: .5rem .75rem;
+    margin-left: -1px;
+    line-height: 1.25;
+    color: #3EC1CD ;
+    background-color: #fff;
+    border: 1px solid #dee2e6;
+}
+
+
+.pagination {
+    border-radius: 50px; /* Rounded corners for pagination container */
+
+}
+.page-item:first-child .page-link{
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+}
+
+.page-item:last-child .page-link{
+
+
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+}
+.pagination .page-item {
+    border-radius: 50px; /* Rounded corners for pagination items */
+}
+
+.pagination .page-link {
+    border-radius: 50px; /* Rounded corners for page links */
+    padding: 0.5rem 1rem; /* Add padding for better appearance */
+    margin: 0.1rem; /* Small margin between items */
+}
+
+.pagination .page-link:hover {
+    background-color: #e9ecef; /* Hover effect */
+}
+
+.pagination .page-item.active .page-link {
+
 }

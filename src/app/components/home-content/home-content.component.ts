@@ -4,7 +4,7 @@ import {enGB} from "date-fns/locale";
 import {AuthService} from "../../services/auth/AuthService";
 import {CommonModule} from '@angular/common';
 import {Appointment, DropdownOption} from "./Appointment";
-import {ModalContentComponent} from "../modal-content/modal-content.component";
+import {AddAppointmentComponent} from "../add-appointment/add-appointment.component";
 import {MatDialog} from "@angular/material/dialog";
 import {MatTooltipModule} from '@angular/material/tooltip';
 import {AppointmentService} from "./appointments.service";
@@ -29,7 +29,7 @@ export class HomeContentComponent {
 
 
     openModal() {
-        this.dialog.open(ModalContentComponent, {
+        this.dialog.open(AddAppointmentComponent, {
             width: '400px',
         });
     }

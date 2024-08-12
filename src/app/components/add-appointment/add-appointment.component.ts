@@ -20,9 +20,9 @@ import {MatDatepicker, MatDatepickerToggle} from "@angular/material/datepicker";
         MatDatepickerToggle,
         MatDatepicker
     ],
-  templateUrl: './modal-content.component.html',
-  styleUrl: './modal-content.component.scss'
+  templateUrl: './add-appointment.component.html',
+  styleUrl: './add-appointment.component.scss'
 })
-export class ModalContentComponent {
+export class AddAppointmentComponent {
 
 }

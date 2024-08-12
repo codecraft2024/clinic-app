@@ -179,3 +179,46 @@
   background:  #3EC1CD;
   border-radius: 12px;
 }
+
+.btn-secondary {
+  color: #fff;
+  background-color: #fff;
+  border-color: #3fc1cd;
+  color: #3fc1cd;
+width: 100%;
+}
+.h5, h5 {
+  font-size: 1.125rem;
+  font-weight: 600 !important;
+  line-height: 1.5 !important;
+}
+/* Hide the table on small screens and show cards */
+@media (max-width: 767px) {
+
+
+  .card {
+    border-bottom : 1px solid #eee;
+    border-radius: 8px;
+    padding: 1rem;
+
+  }
+
+  .card-title {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+    color: #164768 !important;
+  }
+
+  .card-text {
+    margin-bottom: 0.5rem;
+  }
+}
+
+/* Show the table on medium and larger screens */
+@media (min-width: 768px) {
+  .d-none {
+    display: none !important;
+  }
+}
+
+/* Add additional styling for card and table elements as needed */

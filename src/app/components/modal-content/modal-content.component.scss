@@ -1,0 +1,101 @@
+/* General dialog styling */
+::ng-deep{
+
+    /* Basic styling for mat-form-field with outline appearance */
+    mat-form-field {
+        // Adjust the width and margin as needed
+        width: 100%;
+        margin-bottom: 16px;
+    }
+        .mat-form-field-outline {
+            border-color: #ff0000; // Change the border color
+            border-width: 2px; // Adjust the border width
+            border-radius: 4px; // Optional: add border radius
+
+        }
+        .mdc-notched-outline{
+            border-color: #7D8FB3; // Change the border color for start and end
+
+        }
+        .mat-form-field-outline .mat-form-field-outline-start,
+        .mat-form-field-outline .mat-form-field-outline-end {
+            border-color: #ff0000; // Change the border color for start and end
+        }
+
+        .mat-form-field-label {
+            color: #007bff; // Change the label color
+        }
+
+        .mat-form-field-ripple {
+            background-color: rgba(0, 123, 255, 0.3); // Ripple effect color
+        }
+
+        .mat-form-field-underline {
+            display: none; // Hide underline if using outline appearance
+        }
+
+        .mat-form-field-outline {
+            background: #fff; // Background color inside the outline
+        }
+
+
+
+
+
+
+
+
+
+
+
+    mat-dialog-content {
+        padding: 20px;
+        background-color: #fff;
+    }
+
+    mat-form-field {
+        width: 100%;
+        margin-bottom: 16px;
+    }
+
+    mat-form-field mat-label {
+
+        color: #555;
+
+        margin-bottom: 0;
+            font-size: inherit;
+            line-height: 1.5;
+
+    }
+
+    mat-form-field mat-select {
+        color: #495057;
+    }
+
+    mat-form-field mat-error {
+        color: #dc3545;
+    }
+
+    /* Button styling */
+    .btn-save {
+        background-color: #007bff;
+        color: #ffffff;
+        font-weight: 500;
+        padding: 8px 16px;
+        border-radius: 4px;
+        text-transform: uppercase;
+    }
+
+    .btn-save:hover {
+        background-color: #0056b3;
+        color: #ffffff;
+    }
+
+    /* Action buttons alignment */
+    mat-dialog-actions {
+        padding: 16px;
+        border-top: 1px solid #e0e0e0;
+        background-color: #fff;
+    }
+
+}

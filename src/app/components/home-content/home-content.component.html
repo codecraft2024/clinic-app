@@ -21,10 +21,8 @@
     </div>
     <div class="appointment">
         <div class="row">
-            <div class="col-md-8">
+            <div class="col-md-12 justify-content-between d-flex ">
                 <h5 class="mb-0">Upcoming Appointments</h5>
-            </div>
-            <div class="offset-md-3 col-md-1">
                 <button mat-raised-button  class="btn btn-primary btn-add" (click)="openModal()">
                     <i class="fas fa-plus"></i> Add
                 </button>
@@ -33,9 +31,32 @@
 
         </div>
         <div class="row">
+
+            <div class="d-block d-lg-none">
+                <div class="card mb-3" *ngFor="let appointment of paginatedAppointments">
+                    <div class="card-body">
+                        <h6 class="card-title">Appointment #{{ appointment.id }}</h6>
+                        <p class="card-text"><strong>Name:</strong> {{ appointment.name }}</p>
+                        <p class="card-text"><strong>Age:</strong> {{ appointment.age }}</p>
+                        <p class="card-text"><strong>Gender:</strong> {{ appointment.gender }}</p>
+                        <p class="card-text"><strong>Mobile Number:</strong> {{ appointment.phone }}</p>
+                        <p class="card-text"><strong>Date & Time:</strong> {{ appointment.datetime }}</p>
+                        <p class="card-text"><strong>Doctor:</strong> <img [src]="appointment.doctorImage"
+                                                                           class="avatar avatar-md-sm rounded-circle border shadow mr-2" alt="">
+                            {{ appointment.doctor }}</p>
+                        <p class="card-text"><strong>Payment:</strong> {{ appointment.payment }}</p>
+                        <p class="card-text"><strong>Status:</strong>
+                            <span [ngClass]="{ 'pending-status': appointment.Status === 'Pending',
+                              'confirmed-status': appointment.Status === 'Confirmed'}">
+            {{ appointment.Status }}
+          </span>
+                        </p>
+                    </div>
+                </div>
+            </div>
             <div class="col-12 mt-4">
-                <div class="table-responsive bg-white rounded">
-                    <table class="table mb-0 ">
+                <div class="table-responsive bg-white rounded d-md-none d-lg-block">
+                    <table class="table mb-0">
                         <thead>
                         <tr>
                             <th class="border-bottom ">#</th>
@@ -104,84 +125,200 @@
             </div>
         </div>
     </div>
-    <div class="row justify-content-between mb-2 mr-2">
-        <div class="col-sm-12 pl-2 col-md-6">
-            <h5 class="mb-0 ml-4 "> Doctors Scheduler</h5>
+
+    <div class="row">
+        <div class=" col-12 col-md-12 col-lg-4">
+            <div class="appointment">
+                <div class="d-flex justify-content-between p-4 border-bottom">
+                    <h6 class="mb-0 d-flex align-items-center">
+                        <i _ngcontent-ng-c24341674="" class="material-icons mr2">description</i>
+                        Latest Invoices
+                    </h6>
+                        <button mat-raised-button  class="btn btn-primary btn-add" (click)="openModal()">
+                            <i class="fas fa-plus"></i> Add
+                        </button>
+                           </div>
+
+                <div class="">
+                    <ul class="transactions-list list-unstyled mb-0 p-1">
+                        <li class="transaction-item d-flex align-items-center bb-2 pb-20">
+                            <div class="d-flex flex-column flex-grow-1">
+                                <p class="text-primary hover-primary mb-1 fs-16 fw-700">Dr. Jaylon Stanton</p>
+                                <span class="text-fade">Patient name</span>
+                            </div>
+                            <div class="text-end fw-500">
+                                <p class="text-fade mb-0">100 AUD</p>
+                                <a href="doctor_list.html" class="bb-1  text-info">Print</a>
+                            </div>
+                            <a  class="btn-more text-primary ml-3">
+                                <i class="material-icons">keyboard_arrow_right</i>
+                            </a>
+                        </li>
+
+                        <li class="transaction-item d-flex align-items-center bb-2 pb-20">
+                            <div class="d-flex flex-column flex-grow-1">
+                                <p class="text-primary hover-primary mb-1 fs-16 fw-700">Dr. Jaylon Stanton</p>
+                                <span class="text-fade">Patient name</span>
+                            </div>
+                            <div class="text-end fw-500">
+                                <p class="text-fade mb-0">100 AUD</p>
+                                <a href="doctor_list.html" class="bb-1 border-success text-info">Print</a>
+                            </div>
+                            <a  class="btn-more text-primary ml-3">
+                                <i class="material-icons">keyboard_arrow_right</i>
+                            </a>
+                        </li>
+                        <li class="transaction-item d-flex align-items-center bb-2 pb-20">
+                            <div class="d-flex flex-column flex-grow-1">
+                                <p class="text-primary hover-primary mb-1 fs-16 fw-700">Dr. Jaylon Stanton</p>
+                                <span class="text-fade">Patient name</span>
+                            </div>
+                            <div class="text-end fw-500">
+                                <p class="text-fade mb-0">100 AUD</p>
+                                <a href="doctor_list.html" class="bb-1 border-success text-info">Print</a>
+
+                            </div>
+                            <a  class="btn-more text-primary ml-3">
+                                <i class="material-icons">keyboard_arrow_right</i>
+                            </a>
+                        </li>
+                        <li class="transaction-item d-flex align-items-center b-0 bb-2 pb-20">
+                            <div class="d-flex flex-column flex-grow-1">
+                                <p class="text-primary hover-primary mb-1 fs-16 fw-700">Dr. Jaylon Stanton</p>
+                                <span class="text-fade">Patient name</span>
+                            </div>
+                            <div class="text-end fw-500">
+                                <p class="text-fade mb-0">100 AUD</p>
+                                <a href="doctor_list.html" class="bb-1 border-success text-info">Print</a>
+                            </div>
+                            <a  class="btn-more text-primary ml-3">
+                                <i class="material-icons">keyboard_arrow_right</i>
+                            </a>
+                        </li>
+
+                        <!-- Add more list items as needed -->
+                    </ul>
+                </div>            </div>
         </div>
-        <div class="col-xl-4 col-lg-7 col-md-8 mt-4 mt-md-0">
-            <div class="justify-content-end">
-                <form>
-                    <div class="row justify-content-end">
-                        <div class="col-sm-12 col-md-5">
-                            <div>
-                                <div class="dropdown" [ngClass]="{'show': isDropdownOpen}">
-                                    <input type="text" class="form-control dropdown-input" [value]="selectedOption"
-                                           placeholder="Select an option" readonly (click)="toggleDropdown()">
-                                    <div class="dropdown-menu">
-                                        <a class="dropdown-item" *ngFor="let option of dropdownOptions"
-                                           (click)="selectOption(option.toString())">{{ option.label }}</a>
+
+        <div class="col-12 col-md-12 col-lg-4">
+            <div class="appointment">
+                <div class="d-flex justify-content-between p-4 border-bottom">
+                    <h6 class="mb-0 d-flex align-items-center">
+                        <i  class="material-icons mr2">contact_page</i>
+                        Latest Appointment
+                    </h6>
+                    <h6 class="text-muted mb-0">55 Patients</h6>
+                </div>
+                <ul class="list-unstyled mb-0 p-4 pt-0">
+                    <li class="">
+                        <a href="/doctor-dashboard">
+                            <div class="d-flex align-items-center justify-content-between">
+                                <div class="d-inline-flex">
+                                    <div class="">
+                                        <h6 class="text-dark mb-0 d-block">Calvin Carlo</h6>
+                                        <small class="text-muted">Booking on 13th Sep, 2023</small>
                                     </div>
                                 </div>
+                                <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" class="h5 text-dark" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                                    <polyline points="12 5 19 12 12 19"></polyline>
+                                </svg>
                             </div>
+                        </a>
+                    </li>
+                    <li class="pt-4 ms-0">
+                        <a href="/doctor-dashboard">
+                            <div class="d-flex align-items-center justify-content-between">
+                                <div class="d-inline-flex">
+                                    <div class="">
+                                        <h6 class="text-dark mb-0 d-block">Joya Khan</h6>
+                                        <small class="text-muted">Booking on 29th Nov, 2023</small>
+                                    </div>
+                                </div>
+                                <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" class="h5 text-dark" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                                    <polyline points="12 5 19 12 12 19"></polyline>
+                                </svg>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="pt-4 ms-0">
+                        <a href="/doctor-dashboard">
+                            <div class="d-flex align-items-center justify-content-between">
+                                <div class="d-inline-flex">
+                                    <div class="">
+                                        <h6 class="text-dark mb-0 d-block">Amelia Muli</h6>
+                                        <small class="text-muted">Booking on 29th Dec, 2023</small>
+                                    </div>
+                                </div>
+                                <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" class="h5 text-dark" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                                    <polyline points="12 5 19 12 12 19"></polyline>
+                                </svg>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="pt-4 ">
+                        <a href="/doctor-dashboard">
+                            <div class="d-flex align-items-center justify-content-between">
+                                <div class="d-inline-flex">
+                                    <div class="">
+                                        <h6 class="text-dark mb-0 d-block">Nik Ronaldo</h6>
+                                        <small class="text-muted">Booking on 13th March, 2023</small>
+                                    </div>
+                                </div>
+                                <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" class="h5 text-dark" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                                    <polyline points="12 5 19 12 12 19"></polyline>
+                                </svg>
+                            </div>
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+
+        <div class=" col-12 col-md-12 col-lg-4">
+            <div class="appointment">
+                <div class="d-flex justify-content-between p-4 border-bottom">
+                    <h6 class="mb-0 d-flex align-items-center">
+
+                        Check Doctor's Availability
+                    </h6>
+                    <h6 class="text-muted mb-0">view all</h6>
+                </div>
+
+
+                <div class="availability-container">
+                    <form >
+                        <div class="form-group">
+                            <label for="doctor">Select Doctor</label>
+                            <select id="doctor" class="form-control" required>
+                                <option value="" disabled selected>Select a doctor</option>
+                                <option value="1">Dr. Jaylon Stanton</option>
+                                <option value="2">Dr. Alice Smith</option>
+                                <!-- Add more doctors as needed -->
+                            </select>
                         </div>
-
+                        <div class="form-group">
+                            <label for="date">Select Date</label>
+                            <input type="date" id="date" class="form-control" required>
+                        </div>
+                        <button type="submit" class="btn btn-secondary">Check Availability</button>
+                    </form>
+                    <div id="availability-result" class="mt-4">
+                        <!-- Availability results will be displayed here -->
                     </div>
-                </form>
-            </div>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-md-4">
-            <div class="card">
-                <div class="card-body">
-                    <h5 class="card-title">Dr Tarun</h5>
-                    <p class="card-text">Content for Card 1</p>
                 </div>
+
+
             </div>
         </div>
 
-        <div class="col-md-4">
-            <div class="card">
-                <div class="card-body">
-                    <h5 class="card-title">Dr Sham</h5>
-                    <p class="card-text">Content for Card 2</p>
-                </div>
-            </div>
-        </div>
 
-        <div class="col-md-4">
-            <div class="card">
-                <div class="card-body">
-                    <h5 class="card-title">Dr John</h5>
-                    <p class="card-text">Content for Card 3</p>
-                </div>
-            </div>
-        </div>
     </div>
 
 </div>
 
-<div class="modal fade" id="addModal" tabindex="-1" aria-labelledby="addModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="addModalLabel">Add Item</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                <!-- Modal Body Content (e.g., form inputs) -->
-                <form>
-                    <div class="mb-3">
-                        <label for="itemName" class="form-label">Item Name</label>
-                        <input type="text" class="form-control" id="itemName" placeholder="Enter item name">
-                    </div>
-                    <!-- Add more form fields as needed -->
-                </form>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Save changes</button>
-            </div>
-        </div>
-    </div>
-</div>

@@ -1,12 +1,16 @@
-<h2 mat-dialog-title>Add Appointment</h2>
+
+
+
 <mat-dialog-content>
+    <h5>Add Appointment</h5>
+
     <form>
-        <mat-form-field appearance="fill">
+        <mat-form-field appearance="outline">
             <mat-label>Patient Name</mat-label>
             <input matInput placeholder="Enter patient name"  >
         </mat-form-field>
 
-        <mat-form-field appearance="fill">
+        <mat-form-field appearance="outline">
             <mat-label>Gender</mat-label>
             <mat-select  >
                 <mat-option value="Male">Male</mat-option>
@@ -14,14 +18,14 @@
             </mat-select>
         </mat-form-field>
 
-        <mat-form-field appearance="fill">
+        <mat-form-field appearance="outline">
             <mat-label>Phone</mat-label>
             <input matInput placeholder="Enter phone number"  >
         </mat-form-field>
 
 
 
-        <mat-form-field appearance="fill">
+        <mat-form-field appearance="outline">
             <mat-label>Select Doctor</mat-label>
             <mat-select>
                 <mat-option value="Scheduled">Dr. Tarun</mat-option>
@@ -32,7 +36,7 @@
 
 
 
-        <mat-form-field appearance="fill">
+        <mat-form-field appearance="outline">
             <mat-label>Status</mat-label>
             <mat-select> <!--[(ngModel)]="appointment.Status"-->
                 <mat-option value="Scheduled">Pending</mat-option>

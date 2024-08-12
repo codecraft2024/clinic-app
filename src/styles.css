@@ -341,3 +341,82 @@ span {
 }
 
 
+.shadow {
+    box-shadow: 0 0 3px #3c485826 !important;
+}
+
+.text-muted {
+    color: #8492a6 !important;
+}
+.text-primary {
+    color: #164768 !important;
+}
+.text-muted {
+    color: #8492a6 !important;
+    font-size: .9375rem !important ;
+}
+.chat.chat-person .on-off {
+    font-size: 10px;
+}
+.mdi-checkbox-blank-circle:before {
+    content: "\e061";
+}
+
+.mdi-set, .mdi:before {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    display: inline-block;
+    font: normal normal normal 24px / 1 Material Design Icons;
+    font-size: inherit;
+    line-height: inherit;
+    text-rendering: auto;
+}
+.chat.chat-person .on-off {
+    font-size: 10px;
+}
+
+.small, small {
+    font-size: .9em;
+}
+.avatar.avatar-md-sm {
+    height: 45px;
+    width: 45px;
+}
+
+.ms-3 {
+    margin-left: 1rem !important;
+}
+
+.transaction-item{
+    border-bottom: 1px dashed #eee;
+    padding: 1rem;
+}
+
+.b-0{
+    border: none;
+}
+
+h6 {
+    letter-spacing: 0 !important;
+    margin: 0 0 .5em !important;
+    font-size: .9375rem !important;
+}
+
+.availability-container {
+    padding: 20px;
+    min-height: 21.5rem;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+
+
+

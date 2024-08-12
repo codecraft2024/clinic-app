@@ -98,4 +98,58 @@
         background-color: #fff;
     }
 
+    .cdk-global-overlay-wrapper {
+        z-index: 1000; /* Ensure it is on top of other elements */
+        background-color: rgba(0, 0, 0, 0.5); /* Add a semi-transparent background */
+
+        /* Center the overlay content */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        /* Ensure the overlay takes the full screen */
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    .cdk-overlay-container {
+        position: absolute;
+        z-index: 1000;
+    }
+
+    /* Additional styling for the content inside the overlay */
+    .cdk-overlay-pane {
+        border-radius: 8px;
+        background-color: #fff;
+        padding: 20px;
+        box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+        max-width: 90%;
+        max-height: 90%;
+        overflow: auto;
+    }
+    .mat-mdc-dialog-surface {
+        display: flex;
+        flex-direction: column;
+        flex-grow: 0;
+        flex-shrink: 0;
+        box-sizing: border-box;
+        width: 100%;
+        height: 100%;
+        position: relative;
+        overflow-y: auto;
+        outline: 0;
+        transform: scale(0.8);
+        transition: transform var(--mat-dialog-transition-duration, 0ms) cubic-bezier(0, 0, 0.2, 1);
+        max-height: inherit;
+        min-height: inherit;
+        min-width: inherit;
+        max-width: inherit;
+        box-shadow: none;
+        border-radius: var(--mdc-dialog-container-shape, 4px);
+        background: none;
+    }
+
 }

@@ -166,14 +166,14 @@
             <div class="availability-container">
                 <form>
 
-                    <div class="dropdown  w-100" [ngClass]="{'show': isDropdownOpen}">
+                    <div class="dropdown  w-100" >
                         <input type="text" class="form-control dropdown-input"
-                               placeholder="Select an option" readonly
-                               (click)="toggleDropdown()">
+                               placeholder="Select an option"
+                               ">
                         <div class="dropdown-menu">
-                            <a class="dropdown-item" href="#" (click)="selectOption('Option 1')">Option 1</a>
-                            <a class="dropdown-item" href="#" (click)="selectOption('Option 2')">Option 2</a>
-                            <a class="dropdown-item" href="#" (click)="selectOption('Option 3')">Option 3</a>
+                            <a class="dropdown-item" >Option 1</a>
+                            <a class="dropdown-item" >Option 2</a>
+                            <a class="dropdown-item" >Option 3</a>
                         </div>
                     </div>
 

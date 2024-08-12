@@ -12,21 +12,7 @@ export class AppointmentService {
     itemsPerPage = 5;
     currentPage = 1;
     totalPages: number[] = [];
-
-    formatDate(date: Date): string {
-        const options: Intl.DateTimeFormatOptions = {
-            day: '2-digit',
-            month: 'short',
-            year: 'numeric',
-            hour: 'numeric',
-            minute: 'numeric',
-            hour12: true
-        };
-        return new Intl.DateTimeFormat('en-US', options).format(date).replace(',', '');
-    }
-
     today = new Date();
-
     appointments: Appointment[] = [
         {
             id: 1,
@@ -133,13 +119,24 @@ export class AppointmentService {
             Status: 'Pending'
         }
     ];
-
-
     paginatedAppointments: Appointment[] = [];
+    todayAppointments: Appointment[] = [];
 
-    calculateTotalPages() {
-        const pageCount = Math.ceil(this.appointments.length / this.itemsPerPage);
-        this.totalPages = Array(pageCount).fill(0).map((x, i) => i + 1);
+
+    calPaginatedAppointments() {
+        this.appointments.sort((a, b) => b.id - a.id);
+        const startIndex = (this.currentPage - 1) * this.itemsPerPage;
+        const endIndex = startIndex + this.itemsPerPage;
+        this.paginatedAppointments = this.appointments.slice(startIndex, endIndex);
+
+        const now = new Date();
+        const startOfDay = new Date(now.getFullYear(), now.getMonth(), now.getDate(), 0, 0, 0, 0);
+        const endOfDay = new Date(now.getFullYear(), now.getMonth(), now.getDate(), 23, 59, 59, 999);
+
+        this.todayAppointments = this.appointments.filter(appointment => {
+            const appointmentDate = new Date(appointment.datetime);
+            return appointmentDate >= startOfDay && appointmentDate <= endOfDay;
+        });
     }
 
     public AddAppointment(item: Appointment) {
@@ -151,45 +148,46 @@ export class AppointmentService {
         item.id = (this.appointments.length) + 1
         this.appointments.push(item)
 
-        this.updatePaginatedAppointments()
+        this.calPaginatedAppointments()
         this.calculateTotalPages();
-    }
-
-    updatePaginatedAppointments() {
-        this.appointments.sort((a, b) => b.id - a.id);
-        const startIndex = (this.currentPage - 1) * this.itemsPerPage;
-        const endIndex = startIndex + this.itemsPerPage;
-        this.paginatedAppointments = this.appointments.slice(startIndex, endIndex);
     }
 
     goToPage(page: number) {
         this.currentPage = page;
-        this.updatePaginatedAppointments();
+        this.calPaginatedAppointments();
     }
 
     prevPage() {
         if (this.currentPage > 1) {
             this.currentPage--;
-            this.updatePaginatedAppointments();
+            this.calPaginatedAppointments();
         }
     }
 
     nextPage() {
         if (this.currentPage < this.totalPages.length) {
             this.currentPage++;
-            this.updatePaginatedAppointments();
+            this.calPaginatedAppointments();
         }
     }
 
-    getTodayAppointments(): Appointment[] {
-        const now = new Date();
-        const startOfDay = new Date(now.setHours(0, 0, 0, 0));
-        const endOfDay = new Date(now.setHours(23, 59, 59, 999));
+    calculateTotalPages() {
+        const pageCount = Math.ceil(this.appointments.length / this.itemsPerPage);
+        this.totalPages = Array(pageCount).fill(0).map((x, i) => i + 1);
+    }
 
-        return this.appointments.filter(appointment => {
-            const appointmentDate = new Date(appointment.datetime);
-            return appointmentDate >= startOfDay && appointmentDate <= endOfDay;
-        });
+
+
+    private formatDate(date: Date): string {
+        const options: Intl.DateTimeFormatOptions = {
+            day: '2-digit',
+            month: 'short',
+            year: 'numeric',
+            hour: 'numeric',
+            minute: 'numeric',
+            hour12: true
+        };
+        return new Intl.DateTimeFormat('en-US', options).format(date).replace(',', '');
     }
 
     getDoctors() {

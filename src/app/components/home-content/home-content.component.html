@@ -89,16 +89,16 @@
                 <h6 class="mb-0 d-flex align-items-center">
                     Latest Appointment
                 </h6>
-                <h6 class="text-muted mb-0">{{ todayAppointments.length }} Patients</h6>
+                <h6 class="text-muted mb-0">{{ this.appointmentsService.todayAppointments.length }} Patients</h6>
             </div>
             <ul class="list-unstyled mb-0 pl-4 pb-4 pr-4 pt-2">
-                <li *ngFor="let appointment of todayAppointments" class="pt-4 ms-0">
+                <li *ngFor="let appointment of this.appointmentsService.todayAppointments" class="pt-4 ms-0">
                     <a>
                         <div class="d-flex align-items-center justify-content-between">
                             <div class="d-inline-flex">
                                 <div>
                                     <h6 class="text-dark mb-0 d-block">{{ appointment.name }}</h6>
-                                    <small class="text-muted">Booking on {{ appointment.datetimeFormatted | date: 'd MMMM, yyyy' }}</small>
+                                    <small class="text-muted">Appointment on {{ appointment.datetimeFormatted}}</small>
                                 </div>
                             </div>
                             <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24"

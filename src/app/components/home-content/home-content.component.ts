@@ -20,15 +20,12 @@ import {app} from "../../../../server";
 export class HomeContentComponent {
 
     formattedDate: string;
-    todayAppointments:Appointment[]=[];
 
     constructor(protected authService: AuthService, public appointmentsService: AppointmentService, private dialog: MatDialog) {
         this.formattedDate = format(new Date(), "EEEE d MMMM, yyyy 'at' h:mm a", {locale: enGB});
         this.appointmentsService.calculateTotalPages();
-        this.appointmentsService.updatePaginatedAppointments();
+        this.appointmentsService.calPaginatedAppointments();
 
-        this.todayAppointments = appointmentsService.getTodayAppointments();
-        console.log(this.todayAppointments)
     }
 
 

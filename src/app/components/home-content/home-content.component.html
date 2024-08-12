@@ -2,7 +2,7 @@
     <div class="row  ">
         <div class="col-md-6 ">
             <div class="morning-user">
-                <h2>Good Morning, <span> {{ this.authService.getLoggedInUser().fullName }} </span></h2>
+                <h4>Good Morning, <span> {{ this.authService.getLoggedInUser().fullName }} </span></h4>
                 <div class=" d-flex d-flex mt-2">
                     <p>
                         <i class="material-icons"> check_circle</i>
@@ -22,9 +22,8 @@
 <div class="row">
     <div class=" col-12 col-md-12 col-lg-4">
         <div class="appointment p-0">
-            <div class="d-flex justify-content-between p-4 border-bottom">
+            <div class="d-flex justify-content-between p-4 pt-0 border-bottom">
                 <h6 class="mb-0 d-flex align-items-center">
-                    <i _ngcontent-ng-c24341674="" class="material-icons mr2">description</i>
                     Latest Invoices
                 </h6>
                 <button mat-raised-button
@@ -86,16 +85,15 @@
 
     <div class="col-12 col-md-12 col-lg-4">
         <div class="appointment p-0">
-            <div class="d-flex justify-content-between p-4 border-bottom">
+            <div class="d-flex justify-content-between  p-4 border-bottom">
                 <h6 class="mb-0 d-flex align-items-center">
-                    <i class="material-icons mr2">contact_page</i>
                     Latest Appointment
                 </h6>
                 <h6 class="text-muted mb-0">55 Patients</h6>
             </div>
-            <ul class="list-unstyled mb-0 p-4 pt-0">
+            <ul class="list-unstyled mb-0 pl-4 pb-4 pr-4 pt-2">
 
-                <li class="pt-4 ms-0">
+                <li class="ms-0">
                     <a href="/doctor-dashboard">
                         <div class="d-flex align-items-center justify-content-between">
                             <div class="d-inline-flex">
@@ -167,15 +165,19 @@
 
             <div class="availability-container">
                 <form>
-                    <div class="form-group">
-                        <label for="doctor">Select Doctor</label>
-                        <select id="doctor" class="form-control" required>
-                            <option value="" disabled selected>Select a doctor</option>
-                            <option value="1">Dr. Jaylon Stanton</option>
-                            <option value="2">Dr. Alice Smith</option>
-                            <!-- Add more doctors as needed -->
-                        </select>
+
+                    <div class="dropdown  w-100" [ngClass]="{'show': isDropdownOpen}">
+                        <input type="text" class="form-control dropdown-input"
+                               placeholder="Select an option" readonly
+                               (click)="toggleDropdown()">
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="#" (click)="selectOption('Option 1')">Option 1</a>
+                            <a class="dropdown-item" href="#" (click)="selectOption('Option 2')">Option 2</a>
+                            <a class="dropdown-item" href="#" (click)="selectOption('Option 3')">Option 3</a>
+                        </div>
                     </div>
+
+
                     <div class="form-group">
                         <label for="date">Select Date</label>
                         <input type="date" id="date" class="form-control" required>

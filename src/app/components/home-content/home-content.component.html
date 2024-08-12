@@ -32,30 +32,58 @@
         </div>
         <div class="row">
 
-            <div class="d-block d-lg-none">
-                <div class="card mb-3" *ngFor="let appointment of paginatedAppointments">
-                    <div class="card-body">
-                        <h6 class="card-title">Appointment #{{ appointment.id }}</h6>
-                        <p class="card-text"><strong>Name:</strong> {{ appointment.name }}</p>
-                        <p class="card-text"><strong>Age:</strong> {{ appointment.age }}</p>
-                        <p class="card-text"><strong>Gender:</strong> {{ appointment.gender }}</p>
-                        <p class="card-text"><strong>Mobile Number:</strong> {{ appointment.phone }}</p>
-                        <p class="card-text"><strong>Date & Time:</strong> {{ appointment.datetime }}</p>
-                        <p class="card-text"><strong>Doctor:</strong> <img [src]="appointment.doctorImage"
-                                                                           class="avatar avatar-md-sm rounded-circle border shadow mr-2" alt="">
-                            {{ appointment.doctor }}</p>
-                        <p class="card-text"><strong>Payment:</strong> {{ appointment.payment }}</p>
-                        <p class="card-text"><strong>Status:</strong>
-                            <span [ngClass]="{ 'pending-status': appointment.Status === 'Pending',
-                              'confirmed-status': appointment.Status === 'Confirmed'}">
-            {{ appointment.Status }}
-          </span>
-                        </p>
+            <div class="d-block d-lg-none col-12">
+                <div class="card border-bottom  mb-3" *ngFor="let appointment of paginatedAppointments">
+                    <div class="p-1">
+                        <div class="d-flex justify-content-between">
+
+
+                            <h6 class="card-title">Appointment #{{ appointment.id }}</h6>
+
+                            <div class="d-flex flex-column text-end fw-500">
+                                <p class="badge rounded-pill  ms-1" [ngClass]="{ 'pending-status': appointment.Status === 'Pending',
+                              'bg-soft-success': appointment.Status === 'Confirmed'}">
+                                    {{ appointment.Status }}</p>
+
+                            </div>
+                        </div>
+
+
+
+
+                        <div class=" mb-2">
+                            <div class="d-flex flex-column flex-grow-1">
+                                <p class="text-primary hover-primary mb-1 fs-16 fw-700">{{ appointment.name }}</p>
+
+                            </div>
+
+                        </div>
+                        <div class=" mb-2">
+
+
+                            <div class="d-flex flex-column text-end fw-500">
+                                <p class="text-primary hover-primary mb-1 fs-16 fw-700">{{ appointment.phone }}</p>
+
+                            </div>
+                        </div>
+
+                            <div class=" flex-column flex-grow-1 mb-2">
+                                <p class="text-primary hover-primary mb-1 fs-16 fw-700">{{ appointment.datetime }}</p>
+                            </div>
+
+                        <div class="mb-2">
+                            <div class="d-flex">
+                                <img [src]="appointment.doctorImage"
+                                     class="avatar avatar-md-sm rounded-circle border  mr-2 " alt="">
+                                    <p class="text-primary hover-primary mb-1 fs-16 fw-700">{{ appointment.doctor }}</p>
+                            </div>
+
+                        </div>
                     </div>
                 </div>
             </div>
             <div class="col-12 mt-4">
-                <div class="table-responsive bg-white rounded d-md-none d-lg-block">
+                <div class="table-responsive bg-white rounded   d-md-none d-lg-block d-xl-block">
                     <table class="table mb-0">
                         <thead>
                         <tr>

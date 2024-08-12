@@ -129,7 +129,11 @@
   transform: translateY(-50%);
   pointer-events: none;
 }
-
+.bg-soft-success {
+  background-color: #53c7971a !important;
+  border: 1px solid #53c7971a !important;
+  color: #53c797 !important;
+}
 /* Style for the dropdown menu */
 .dropdown-menu {
   display: none;
@@ -179,7 +183,10 @@
   background:  #3EC1CD;
   border-radius: 12px;
 }
-
+.border-bottom {
+  border: 0;
+  border-bottom: 1px solid #dee2e6 !important;
+}
 .btn-secondary {
   color: #fff;
   background-color: #fff;
@@ -198,7 +205,6 @@ width: 100%;
 
   .card {
     border-bottom : 1px solid #eee;
-    border-radius: 8px;
     padding: 1rem;
 
   }

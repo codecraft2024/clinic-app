@@ -281,7 +281,7 @@ span {
     color: #fff;
     background-color: #3EC1CD !important;
     border-color: #3EC1CD !important;
-    border-radius: 32px;
+    border-radius: 4px;
 
 }
 
@@ -419,4 +419,10 @@ h6 {
 
 
 
-
+.btn-secondary {
+    color: #fff;
+    background-color: #fff;
+    border-color: #3fc1cd;
+    color: #3fc1cd;
+    margin-right: 8px;
+}

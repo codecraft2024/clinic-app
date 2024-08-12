@@ -306,7 +306,7 @@
                         <th class="">{{ appointment.id }}</th>
                         <td class="">
                             <a class="text-dark">
-                                <div class="d-flex align-items-center">
+                                <div class="d-flex align-items-center" matTooltip="Browser to patiant Profile from here!">
                                     <span class="ms-2">{{ appointment.name }}</span>
                                 </div>
                             </a>
@@ -317,7 +317,7 @@
                         <td class="">{{ appointment.datetime }}</td>
                         <td class="">
                             <a class="text-dark">
-                                <div class="d-flex align-items-center">
+                                <div class="d-flex align-items-center" matTooltip="Doctor Profile will be open from here !">
                                     <img [src]="appointment.doctorImage"
                                          class="avatar avatar-md-sm rounded-circle border shadow mr-2" alt="">
                                     <span class="ms-2">{{ appointment.doctor }}</span>

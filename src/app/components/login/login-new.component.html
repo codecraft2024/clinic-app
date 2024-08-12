@@ -24,7 +24,7 @@
                 <input type="text" id="password" class="fadeIn third " name="password" autocomplete="off" placeholder="password" [(ngModel)]="userLoginModel.password">
 
                 </div>
-                <button  (click)="onLogin()">login</button>
+                <button class="btn btn-primary" (click)="onLogin()">login</button>
                 <div *ngIf="errorMessage" class="error-message">{{ errorMessage }}</div>
             </form>
 

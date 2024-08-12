@@ -1,9 +1,12 @@
 <mat-dialog-content>
     <h5 mat-dialog-title>Add Appointment</h5>
-    <form #appointmentForm="ngForm">
+    <form #appointmentForm="ngForm" novalidate>
         <mat-form-field appearance="outline">
             <mat-label>Patient Name</mat-label>
             <input matInput placeholder="Enter patient name" [(ngModel)]="newAppointment.name" name="patientName" required>
+            <mat-error *ngIf="appointmentForm.submitted && !appointmentForm.controls['patientName']?.valid">
+                Patient Name is required.
+            </mat-error>
         </mat-form-field>
 
         <mat-form-field appearance="outline">
@@ -12,11 +15,17 @@
                 <mat-option value="Male">Male</mat-option>
                 <mat-option value="Female">Female</mat-option>
             </mat-select>
+            <mat-error *ngIf="appointmentForm.submitted && !appointmentForm.controls['gender']?.valid">
+                Gender is required.
+            </mat-error>
         </mat-form-field>
 
         <mat-form-field appearance="outline">
             <mat-label>Phone</mat-label>
             <input matInput placeholder="Enter phone number" [(ngModel)]="newAppointment.phone" name="phone" required>
+            <mat-error *ngIf="appointmentForm.submitted && !appointmentForm.controls['phone']?.valid">
+                Phone number is required.
+            </mat-error>
         </mat-form-field>
 
         <mat-form-field appearance="outline">
@@ -26,6 +35,9 @@
                     {{ doctor }}
                 </mat-option>
             </mat-select>
+            <mat-error *ngIf="appointmentForm.submitted && !appointmentForm.controls['doctor']?.valid">
+                Doctor selection is required.
+            </mat-error>
         </mat-form-field>
 
         <mat-form-field appearance="outline">
@@ -35,10 +47,13 @@
                 <mat-option value="Confirmed">Confirmed</mat-option>
                 <mat-option value="Cancelled">Cancelled</mat-option>
             </mat-select>
+            <mat-error *ngIf="appointmentForm.submitted && !appointmentForm.controls['status']?.valid">
+                Status selection is required.
+            </mat-error>
         </mat-form-field>
     </form>
 </mat-dialog-content>
 <mat-dialog-actions align="end">
     <button mat-button mat-dialog-close class="btn btn-secondary">Close</button>
-    <button mat-button class="btn btn-primary" (click)="saveAppointment()">Save</button>
+    <button mat-button class="btn btn-primary" (click)="saveAppointment(appointmentForm)">Save</button>
 </mat-dialog-actions>

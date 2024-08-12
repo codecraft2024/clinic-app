@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {MatDialogActions, MatDialogContent} from "@angular/material/dialog";
+import {MatDialogActions, MatDialogContent, MatDialogRef} from "@angular/material/dialog";
 import {MatFormField} from "@angular/material/form-field";
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
@@ -7,8 +7,8 @@ import {MatOption, MatSelect} from "@angular/material/select";
 import {MatDatepicker, MatDatepickerToggle} from "@angular/material/datepicker";
 import {Appointment} from "../home-content/Appointment";
 import {AppointmentService} from "../home-content/appointments.service";
-import {FormsModule} from "@angular/forms";
-import {NgForOf} from "@angular/common";
+import {FormsModule, NgForm} from "@angular/forms";
+import {NgForOf, NgIf} from "@angular/common";
 import {enGB} from "date-fns/locale";
 import {format} from "date-fns";
 
@@ -26,7 +26,8 @@ import {format} from "date-fns";
         MatDatepickerToggle,
         MatDatepicker,
         FormsModule,
-        NgForOf
+        NgForOf,
+        NgIf
     ],
   templateUrl: './add-appointment.component.html',
   styleUrl: './add-appointment.component.scss'
@@ -36,16 +37,22 @@ export class AddAppointmentComponent implements  OnInit{
     doctors: string[] = [];
     ngOnInit(): void {
         this.doctors = this.appointmentService.getDoctors();
-        console.log(this.doctors)
-
-    }
-    constructor(private appointmentService:AppointmentService) {
-
     }
 
-    saveAppointment() {
+    constructor(private appointmentService:AppointmentService , public dialogRef: MatDialogRef<AddAppointmentComponent>) {
 
-        this.appointmentService.AddAppointment(this.newAppointment);
+    }
+
+
+
+    saveAppointment(form: NgForm): void {
+        if (form.valid) {
+            this.appointmentService.AddAppointment(this.newAppointment);
+            this.dialogRef.close();
+        } else {
+            // Handle form errors here (optional)
+            console.log('Form is invalid');
+        }
     }
 
 

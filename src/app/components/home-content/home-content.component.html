@@ -1,350 +1,357 @@
-    <div class="good-morning-blk">
-        <div class="row  ">
-            <div class="col-md-6 ">
-                <div class="morning-user">
-                    <h2>Good Morning, <span> {{ this.authService.getLoggedInUser().fullName }} </span></h2>
-                    <div class=" d-flex d-flex mt-2">
-                        <p>
-                            <i class="material-icons"> check_circle</i>
-                        </p> <span>Your last login was on {{ formattedDate }}</span>
-                    </div>
-
-
+<div class="good-morning-blk">
+    <div class="row  ">
+        <div class="col-md-6 ">
+            <div class="morning-user">
+                <h2>Good Morning, <span> {{ this.authService.getLoggedInUser().fullName }} </span></h2>
+                <div class=" d-flex d-flex mt-2">
+                    <p>
+                        <i class="material-icons"> check_circle</i>
+                    </p> <span>Your last login was on {{ formattedDate }}</span>
                 </div>
+
+
             </div>
-            <div class="col-md-6 position-blk">
-                <div class="morning-img">
-                </div>
+        </div>
+        <div class="col-md-6 position-blk">
+            <div class="morning-img">
             </div>
         </div>
     </div>
-    <div class="appointment">
-        <div class="row">
-            <div class="col-md-12 justify-content-between d-flex  ">
-                <h5 class="mb-0">Upcoming Appointments</h5>
-                <button mat-raised-button  class="btn btn-primary btn-add" (click)="openModal()">
-                    <i class="fas fa-plus"></i> Add
-                </button>
-            </div>
-
-
+</div>
+<div class="appointment">
+    <div class="row">
+        <div class="col-md-12 justify-content-between d-flex  ">
+            <h5 class="mb-0">Upcoming Appointments</h5>
+            <button mat-raised-button class="btn btn-primary btn-add" (click)="openModal()">
+                <i class="fas fa-plus"></i> Add
+            </button>
         </div>
-        <div class="row mt-4">
-
-            <div class="d-block d-lg-none col-12">
-                <div class="card border-bottom  mb-3" *ngFor="let appointment of paginatedAppointments">
-                    <div class="p-1">
-                        <div class="d-flex justify-content-between">
 
 
-                            <h6 class="card-title">Appointment #{{ appointment.id }}</h6>
+    </div>
+    <div class="row mt-4">
 
-                            <div class="d-flex flex-column text-end fw-500">
-                                <p class="badge rounded-pill  ms-1" [ngClass]="{ 'pending-status': appointment.Status === 'Pending',
+        <div class="d-block d-lg-none col-12">
+            <div class="card border-bottom  mb-3" *ngFor="let appointment of paginatedAppointments">
+                <div class="p-1">
+                    <div class="d-flex justify-content-between">
+
+
+                        <h6 class="card-title">Appointment #{{ appointment.id }}</h6>
+
+                        <div class="d-flex flex-column text-end fw-500">
+                            <p class="badge rounded-pill  ms-1" [ngClass]="{ 'pending-status': appointment.Status === 'Pending',
                               'bg-soft-success': appointment.Status === 'Confirmed'}">
-                                    {{ appointment.Status }}</p>
-
-                            </div>
-                        </div>
-
-
-
-
-                        <div class=" mb-2">
-                            <div class="d-flex flex-column flex-grow-1">
-                                <p class="text-primary hover-primary mb-1 fs-16 fw-700">{{ appointment.name }}</p>
-
-                            </div>
-
-                        </div>
-                        <div class=" mb-2">
-
-
-                            <div class="d-flex flex-column text-end fw-500">
-                                <p class="text-primary hover-primary mb-1 fs-16 fw-700">{{ appointment.phone }}</p>
-
-                            </div>
-                        </div>
-
-                            <div class=" flex-column flex-grow-1 mb-2">
-                                <p class="text-primary hover-primary mb-1 fs-16 fw-700">{{ appointment.datetime }}</p>
-                            </div>
-
-                        <div class="mb-2">
-                            <div class="d-flex">
-                                <img [src]="appointment.doctorImage"
-                                     class="avatar avatar-md-sm rounded-circle border  mr-2 " alt="">
-                                    <p class="text-primary hover-primary mb-1 fs-16 fw-700">{{ appointment.doctor }}</p>
-                            </div>
+                                {{ appointment.Status }}</p>
 
                         </div>
                     </div>
-                </div>
-            </div>
-            <div class="col-12 mt-4">
-                <div class="table-responsive bg-white rounded   d-md-none d-lg-block d-xl-block">
-                    <table class="table mb-0">
-                        <thead>
-                        <tr>
-                            <th class="border-bottom ">#</th>
-                            <th class="border-bottom">Name</th>
-                            <th class="border-bottom">Age</th>
-                            <th class="border-bottom">Gender</th>
-                            <th class="border-bottom">Mobile Number</th>
-                            <th class="border-bottom">Date & Time</th>
-                            <th class="border-bottom">Doctor</th>
-                            <th class="border-bottom">Payment</th>
-                            <th class="border-bottom">Status</th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                        <tr *ngFor="let appointment of paginatedAppointments">
-                            <th class="">{{ appointment.id }}</th>
-                            <td class="">
-                                <a class="text-dark">
-                                    <div class="d-flex align-items-center">
-                                        <span class="ms-2">{{ appointment.name }}</span>
-                                    </div>
-                                </a>
-                            </td>
-                            <td class="">{{ appointment.age }}</td>
-                            <td class="">{{ appointment.gender }}</td>
-                            <td class="">{{ appointment.phone }}</td>
-                            <td class="">{{ appointment.datetime }}</td>
-                            <td class="">
-                                <a class="text-dark">
-                                    <div class="d-flex align-items-center">
-                                        <img [src]="appointment.doctorImage"
-                                             class="avatar avatar-md-sm rounded-circle border shadow mr-2" alt="">
-                                        <span class="ms-2">{{ appointment.doctor }}</span>
-                                    </div>
-                                </a>
-                            </td>
-                            <td class="">{{ appointment.payment }}</td>
-                            <td [ngClass]="{ 'pending-status': appointment.Status === 'Pending',
-                                              'confirmed-status': appointment.Status === 'Confirmed'}">
-                                {{ appointment.Status }}
-                            </td>
-                        </tr>
-                        </tbody>
-                    </table>
+
+
+                    <div class=" mb-2">
+                        <div class="d-flex flex-column flex-grow-1">
+                            <p class="text-primary hover-primary mb-1 fs-16 fw-700">{{ appointment.name }}</p>
+
+                        </div>
+
+                    </div>
+                    <div class=" mb-2">
+
+
+                        <div class="d-flex flex-column text-end fw-500">
+                            <p class="text-primary hover-primary mb-1 fs-16 fw-700">{{ appointment.phone }}</p>
+
+                        </div>
+                    </div>
+
+                    <div class=" flex-column flex-grow-1 mb-2">
+                        <p class="text-primary hover-primary mb-1 fs-16 fw-700">{{ appointment.datetime }}</p>
+                    </div>
+
+                    <div class="mb-2">
+                        <div class="d-flex">
+                            <img [src]="appointment.doctorImage"
+                                 class="avatar avatar-md-sm rounded-circle border  mr-2 " alt="">
+                            <p class="text-primary hover-primary mb-1 fs-16 fw-700">{{ appointment.doctor }}</p>
+                        </div>
+
+                    </div>
                 </div>
             </div>
         </div>
+        <div class="col-12 mt-4">
+            <div class="table-responsive bg-white rounded   d-md-none d-lg-block d-xl-block">
+                <table class="table mb-0">
+                    <thead>
+                    <tr>
+                        <th class="border-bottom ">#</th>
+                        <th class="border-bottom">Name</th>
+                        <th class="border-bottom">Age</th>
+                        <th class="border-bottom">Gender</th>
+                        <th class="border-bottom">Mobile Number</th>
+                        <th class="border-bottom">Date & Time</th>
+                        <th class="border-bottom">Doctor</th>
+                        <th class="border-bottom">Payment</th>
+                        <th class="border-bottom">Status</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr *ngFor="let appointment of paginatedAppointments">
+                        <th class="">{{ appointment.id }}</th>
+                        <td class="">
+                            <a class="text-dark">
+                                <div class="d-flex align-items-center">
+                                    <span class="ms-2">{{ appointment.name }}</span>
+                                </div>
+                            </a>
+                        </td>
+                        <td class="">{{ appointment.age }}</td>
+                        <td class="">{{ appointment.gender }}</td>
+                        <td class="">{{ appointment.phone }}</td>
+                        <td class="">{{ appointment.datetime }}</td>
+                        <td class="">
+                            <a class="text-dark">
+                                <div class="d-flex align-items-center">
+                                    <img [src]="appointment.doctorImage"
+                                         class="avatar avatar-md-sm rounded-circle border shadow mr-2" alt="">
+                                    <span class="ms-2">{{ appointment.doctor }}</span>
+                                </div>
+                            </a>
+                        </td>
+                        <td class="">{{ appointment.payment }}</td>
+                        <td [ngClass]="{ 'pending-status': appointment.Status === 'Pending',
+                                              'confirmed-status': appointment.Status === 'Confirmed'}">
+                            {{ appointment.Status }}
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
 
-        <div class="row text-center">
-            <div class="col-12 mt-4">
-                <div class="d-md-flex align-items-center text-center justify-content-between">
+    <div class="row text-center">
+        <div class="col-12 mt-4">
+            <div class="d-md-flex align-items-center text-center justify-content-between">
             <span class="text-muted me-3">Showing 1 - {{ appointments.length }}
                 out of {{ appointments.length }}</span>
-                    <ul class="pagination justify-content-center mb-0 mt-3 mt-sm-0">
-                        <li class="page-item" [class.disabled]="currentPage === 1">
-                            <a class="page-link" aria-label="Previous" (click)="prevPage()">Prev</a>
-                        </li>
-                        <li *ngFor="let page of totalPages" class="page-item" [class.active]="page === currentPage">
-                            <a class="page-link" (click)="goToPage(page)">{{ page }}</a>
-                        </li>
-                        <li class="page-item" [class.disabled]="currentPage === totalPages.length">
-                            <a class="page-link" aria-label="Next" (click)="nextPage()">Next</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="row">
-        <div class=" col-12 col-md-12 col-lg-4">
-            <div class="appointment">
-                <div class="d-flex justify-content-between p-4 border-bottom">
-                    <h6 class="mb-0 d-flex align-items-center">
-                        <i _ngcontent-ng-c24341674="" class="material-icons mr2">description</i>
-                        Latest Invoices
-                    </h6>
-                        <button mat-raised-button  class="btn btn-primary btn-add" (click)="openModal()">
-                            <i class="fas fa-plus"></i> Add
-                        </button>
-                           </div>
-
-                <div class="">
-                    <ul class="transactions-list list-unstyled mb-0 p-1">
-                        <li class="transaction-item d-flex align-items-center bb-2 pb-20">
-                            <div class="d-flex flex-column flex-grow-1">
-                                <p class="text-primary hover-primary mb-1 fs-16 fw-700">Dr. Jaylon Stanton</p>
-                                <span class="text-fade">Patient name</span>
-                            </div>
-                            <div class="text-end fw-500">
-                                <p class="text-fade mb-0">100 AUD</p>
-                                <a href="doctor_list.html" class="bb-1  text-info">Print</a>
-                            </div>
-                            <a  class="btn-more text-primary ml-3">
-                                <i class="material-icons">keyboard_arrow_right</i>
-                            </a>
-                        </li>
-
-                        <li class="transaction-item d-flex align-items-center bb-2 pb-20">
-                            <div class="d-flex flex-column flex-grow-1">
-                                <p class="text-primary hover-primary mb-1 fs-16 fw-700">Dr. Jaylon Stanton</p>
-                                <span class="text-fade">Patient name</span>
-                            </div>
-                            <div class="text-end fw-500">
-                                <p class="text-fade mb-0">100 AUD</p>
-                                <a href="doctor_list.html" class="bb-1 border-success text-info">Print</a>
-                            </div>
-                            <a  class="btn-more text-primary ml-3">
-                                <i class="material-icons">keyboard_arrow_right</i>
-                            </a>
-                        </li>
-                        <li class="transaction-item d-flex align-items-center bb-2 pb-20">
-                            <div class="d-flex flex-column flex-grow-1">
-                                <p class="text-primary hover-primary mb-1 fs-16 fw-700">Dr. Jaylon Stanton</p>
-                                <span class="text-fade">Patient name</span>
-                            </div>
-                            <div class="text-end fw-500">
-                                <p class="text-fade mb-0">100 AUD</p>
-                                <a href="doctor_list.html" class="bb-1 border-success text-info">Print</a>
-
-                            </div>
-                            <a  class="btn-more text-primary ml-3">
-                                <i class="material-icons">keyboard_arrow_right</i>
-                            </a>
-                        </li>
-                        <li class="transaction-item d-flex align-items-center b-0 bb-2 pb-20">
-                            <div class="d-flex flex-column flex-grow-1">
-                                <p class="text-primary hover-primary mb-1 fs-16 fw-700">Dr. Jaylon Stanton</p>
-                                <span class="text-fade">Patient name</span>
-                            </div>
-                            <div class="text-end fw-500">
-                                <p class="text-fade mb-0">100 AUD</p>
-                                <a href="doctor_list.html" class="bb-1 border-success text-info">Print</a>
-                            </div>
-                            <a  class="btn-more text-primary ml-3">
-                                <i class="material-icons">keyboard_arrow_right</i>
-                            </a>
-                        </li>
-
-                        <!-- Add more list items as needed -->
-                    </ul>
-                </div>            </div>
-        </div>
-
-        <div class="col-12 col-md-12 col-lg-4">
-            <div class="appointment">
-                <div class="d-flex justify-content-between p-4 border-bottom">
-                    <h6 class="mb-0 d-flex align-items-center">
-                        <i  class="material-icons mr2">contact_page</i>
-                        Latest Appointment
-                    </h6>
-                    <h6 class="text-muted mb-0">55 Patients</h6>
-                </div>
-                <ul class="list-unstyled mb-0 p-4 pt-0">
-                    <li class="">
-                        <a href="/doctor-dashboard">
-                            <div class="d-flex align-items-center justify-content-between">
-                                <div class="d-inline-flex">
-                                    <div class="">
-                                        <h6 class="text-dark mb-0 d-block">Calvin Carlo</h6>
-                                        <small class="text-muted">Booking on 13th Sep, 2023</small>
-                                    </div>
-                                </div>
-                                <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" class="h5 text-dark" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
-                                    <line x1="5" y1="12" x2="19" y2="12"></line>
-                                    <polyline points="12 5 19 12 12 19"></polyline>
-                                </svg>
-                            </div>
-                        </a>
+                <ul class="pagination justify-content-center mb-0 mt-3 mt-sm-0">
+                    <li class="page-item" [class.disabled]="currentPage === 1">
+                        <a class="page-link" aria-label="Previous" (click)="prevPage()">Prev</a>
                     </li>
-                    <li class="pt-4 ms-0">
-                        <a href="/doctor-dashboard">
-                            <div class="d-flex align-items-center justify-content-between">
-                                <div class="d-inline-flex">
-                                    <div class="">
-                                        <h6 class="text-dark mb-0 d-block">Joya Khan</h6>
-                                        <small class="text-muted">Booking on 29th Nov, 2023</small>
-                                    </div>
-                                </div>
-                                <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" class="h5 text-dark" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
-                                    <line x1="5" y1="12" x2="19" y2="12"></line>
-                                    <polyline points="12 5 19 12 12 19"></polyline>
-                                </svg>
-                            </div>
-                        </a>
+                    <li *ngFor="let page of totalPages" class="page-item" [class.active]="page === currentPage">
+                        <a class="page-link" (click)="goToPage(page)">{{ page }}</a>
                     </li>
-                    <li class="pt-4 ms-0">
-                        <a href="/doctor-dashboard">
-                            <div class="d-flex align-items-center justify-content-between">
-                                <div class="d-inline-flex">
-                                    <div class="">
-                                        <h6 class="text-dark mb-0 d-block">Amelia Muli</h6>
-                                        <small class="text-muted">Booking on 29th Dec, 2023</small>
-                                    </div>
-                                </div>
-                                <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" class="h5 text-dark" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
-                                    <line x1="5" y1="12" x2="19" y2="12"></line>
-                                    <polyline points="12 5 19 12 12 19"></polyline>
-                                </svg>
-                            </div>
-                        </a>
+                    <li class="page-item" [class.disabled]="currentPage === totalPages.length">
+                        <a class="page-link" aria-label="Next" (click)="nextPage()">Next</a>
                     </li>
-                    <li class="pt-4 ">
-                        <a href="/doctor-dashboard">
-                            <div class="d-flex align-items-center justify-content-between">
-                                <div class="d-inline-flex">
-                                    <div class="">
-                                        <h6 class="text-dark mb-0 d-block">Nik Ronaldo</h6>
-                                        <small class="text-muted">Booking on 13th March, 2023</small>
-                                    </div>
-                                </div>
-                                <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" class="h5 text-dark" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
-                                    <line x1="5" y1="12" x2="19" y2="12"></line>
-                                    <polyline points="12 5 19 12 12 19"></polyline>
-                                </svg>
-                            </div>
-                        </a>
-                    </li>
-
                 </ul>
             </div>
         </div>
+    </div>
+</div>
 
-        <div class=" col-12 col-md-12 col-lg-4">
-            <div class="appointment">
-                <div class="d-flex justify-content-between p-4 border-bottom">
-                    <h6 class="mb-0 d-flex align-items-center">
+<div class="row">
+    <div class=" col-12 col-md-12 col-lg-4">
+        <div class="appointment">
+            <div class="d-flex justify-content-between p-4 border-bottom">
+                <h6 class="mb-0 d-flex align-items-center">
+                    <i _ngcontent-ng-c24341674="" class="material-icons mr2">description</i>
+                    Latest Invoices
+                </h6>
+                <button mat-raised-button class="btn btn-primary btn-add">
+                    <i class="fas fa-file-invoice"></i> New Invoice
+                </button>
+            </div>
 
-                        Check Doctor's Availability
-                    </h6>
-                    <h6 class="text-muted mb-0">view all</h6>
-                </div>
-
-
-                <div class="availability-container">
-                    <form >
-                        <div class="form-group">
-                            <label for="doctor">Select Doctor</label>
-                            <select id="doctor" class="form-control" required>
-                                <option value="" disabled selected>Select a doctor</option>
-                                <option value="1">Dr. Jaylon Stanton</option>
-                                <option value="2">Dr. Alice Smith</option>
-                                <!-- Add more doctors as needed -->
-                            </select>
+            <div class="">
+                <ul class="transactions-list list-unstyled mb-0 p-1">
+                    <li class="transaction-item d-flex align-items-center bb-2 pb-20">
+                        <div class="d-flex flex-column flex-grow-1">
+                            <p class="text-primary hover-primary mb-1 fs-16 fw-700">Dr. Jaylon Stanton</p>
+                            <span class="text-fade">Patient name</span>
                         </div>
-                        <div class="form-group">
-                            <label for="date">Select Date</label>
-                            <input type="date" id="date" class="form-control" required>
+                        <div class="text-end fw-500">
+                            <p class="text-fade mb-0">100 AUD</p>
+                            <a href="doctor_list.html" class="bb-1  text-info">Print</a>
                         </div>
-                        <button type="submit" class="btn btn-secondary">Check Availability</button>
-                    </form>
-                    <div id="availability-result" class="mt-4">
-                        <!-- Availability results will be displayed here -->
-                    </div>
-                </div>
+                        <a class="btn-more text-primary ml-3">
+                            <i class="material-icons">keyboard_arrow_right</i>
+                        </a>
+                    </li>
 
+                    <li class="transaction-item d-flex align-items-center bb-2 pb-20">
+                        <div class="d-flex flex-column flex-grow-1">
+                            <p class="text-primary hover-primary mb-1 fs-16 fw-700">Dr. Jaylon Stanton</p>
+                            <span class="text-fade">Patient name</span>
+                        </div>
+                        <div class="text-end fw-500">
+                            <p class="text-fade mb-0">100 AUD</p>
+                            <a href="doctor_list.html" class="bb-1 border-success text-info">Print</a>
+                        </div>
+                        <a class="btn-more text-primary ml-3">
+                            <i class="material-icons">keyboard_arrow_right</i>
+                        </a>
+                    </li>
+                    <li class="transaction-item d-flex align-items-center bb-2 pb-20">
+                        <div class="d-flex flex-column flex-grow-1">
+                            <p class="text-primary hover-primary mb-1 fs-16 fw-700">Dr. Jaylon Stanton</p>
+                            <span class="text-fade">Patient name</span>
+                        </div>
+                        <div class="text-end fw-500">
+                            <p class="text-fade mb-0">100 AUD</p>
+                            <a href="doctor_list.html" class="bb-1 border-success text-info">Print</a>
 
+                        </div>
+                        <a class="btn-more text-primary ml-3">
+                            <i class="material-icons">keyboard_arrow_right</i>
+                        </a>
+                    </li>
+                    <li class="transaction-item d-flex align-items-center b-0 bb-2 pb-20">
+                        <div class="d-flex flex-column flex-grow-1">
+                            <p class="text-primary hover-primary mb-1 fs-16 fw-700">Dr. Jaylon Stanton</p>
+                            <span class="text-fade">Patient name</span>
+                        </div>
+                        <div class="text-end fw-500">
+                            <p class="text-fade mb-0">100 AUD</p>
+                            <a href="doctor_list.html" class="bb-1 border-success text-info">Print</a>
+                        </div>
+                        <a class="btn-more text-primary ml-3">
+                            <i class="material-icons">keyboard_arrow_right</i>
+                        </a>
+                    </li>
+
+                    <!-- Add more list items as needed -->
+                </ul>
             </div>
         </div>
-
-
     </div>
+
+    <div class="col-12 col-md-12 col-lg-4">
+        <div class="appointment">
+            <div class="d-flex justify-content-between p-4 border-bottom">
+                <h6 class="mb-0 d-flex align-items-center">
+                    <i class="material-icons mr2">contact_page</i>
+                    Latest Appointment
+                </h6>
+                <h6 class="text-muted mb-0">55 Patients</h6>
+            </div>
+            <ul class="list-unstyled mb-0 p-4 pt-0">
+                <li class="">
+                    <a href="/doctor-dashboard">
+                        <div class="d-flex align-items-center justify-content-between">
+                            <div class="d-inline-flex">
+                                <div class="">
+                                    <h6 class="text-dark mb-0 d-block">Calvin Carlo</h6>
+                                    <small class="text-muted">Booking on 13th Sep, 2023</small>
+                                </div>
+                            </div>
+                            <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24"
+                                 stroke-linecap="round" stroke-linejoin="round" class="h5 text-dark" height="1em"
+                                 width="1em" xmlns="http://www.w3.org/2000/svg">
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                                <polyline points="12 5 19 12 12 19"></polyline>
+                            </svg>
+                        </div>
+                    </a>
+                </li>
+                <li class="pt-4 ms-0">
+                    <a href="/doctor-dashboard">
+                        <div class="d-flex align-items-center justify-content-between">
+                            <div class="d-inline-flex">
+                                <div class="">
+                                    <h6 class="text-dark mb-0 d-block">Joya Khan</h6>
+                                    <small class="text-muted">Booking on 29th Nov, 2023</small>
+                                </div>
+                            </div>
+                            <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24"
+                                 stroke-linecap="round" stroke-linejoin="round" class="h5 text-dark" height="1em"
+                                 width="1em" xmlns="http://www.w3.org/2000/svg">
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                                <polyline points="12 5 19 12 12 19"></polyline>
+                            </svg>
+                        </div>
+                    </a>
+                </li>
+                <li class="pt-4 ms-0">
+                    <a href="/doctor-dashboard">
+                        <div class="d-flex align-items-center justify-content-between">
+                            <div class="d-inline-flex">
+                                <div class="">
+                                    <h6 class="text-dark mb-0 d-block">Amelia Muli</h6>
+                                    <small class="text-muted">Booking on 29th Dec, 2023</small>
+                                </div>
+                            </div>
+                            <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24"
+                                 stroke-linecap="round" stroke-linejoin="round" class="h5 text-dark" height="1em"
+                                 width="1em" xmlns="http://www.w3.org/2000/svg">
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                                <polyline points="12 5 19 12 12 19"></polyline>
+                            </svg>
+                        </div>
+                    </a>
+                </li>
+                <li class="pt-4 ">
+                    <a href="/doctor-dashboard">
+                        <div class="d-flex align-items-center justify-content-between">
+                            <div class="d-inline-flex">
+                                <div class="">
+                                    <h6 class="text-dark mb-0 d-block">Nik Ronaldo</h6>
+                                    <small class="text-muted">Booking on 13th March, 2023</small>
+                                </div>
+                            </div>
+                            <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24"
+                                 stroke-linecap="round" stroke-linejoin="round" class="h5 text-dark" height="1em"
+                                 width="1em" xmlns="http://www.w3.org/2000/svg">
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                                <polyline points="12 5 19 12 12 19"></polyline>
+                            </svg>
+                        </div>
+                    </a>
+                </li>
+
+            </ul>
+        </div>
+    </div>
+
+    <div class=" col-12 col-md-12 col-lg-4">
+        <div class="appointment">
+            <div class="d-flex justify-content-between p-4 border-bottom">
+                <h6 class="mb-0 d-flex align-items-center">
+
+                    Check Doctor's Availability
+                </h6>
+                <h6 class="text-muted mb-0">View all</h6>
+            </div>
+
+
+            <div class="availability-container">
+                <form>
+                    <div class="form-group">
+                        <label for="doctor">Select Doctor</label>
+                        <select id="doctor" class="form-control" required>
+                            <option value="" disabled selected>Select a doctor</option>
+                            <option value="1">Dr. Jaylon Stanton</option>
+                            <option value="2">Dr. Alice Smith</option>
+                            <!-- Add more doctors as needed -->
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="date">Select Date</label>
+                        <input type="date" id="date" class="form-control" required>
+                    </div>
+                    <button type="submit" class="btn btn-secondary">Check Availability</button>
+                </form>
+                <div id="availability-result" class="mt-4">
+                    <!-- Availability results will be displayed here -->
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+
+
+</div>
 
 

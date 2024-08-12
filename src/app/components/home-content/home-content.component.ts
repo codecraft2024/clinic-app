@@ -6,11 +6,12 @@ import {CommonModule} from '@angular/common';
 import {Appointment, DropdownOption} from "./Appointment";
 import {ModalContentComponent} from "../modal-content/modal-content.component";
 import {MatDialog} from "@angular/material/dialog";
+import { MatTooltipModule } from '@angular/material/tooltip';
 
 @Component({
     selector: 'app-home-content',
     standalone: true,
-    imports: [CommonModule],
+    imports: [CommonModule,MatTooltipModule],
     templateUrl: './home-content.component.html',
     styleUrl: './home-content.component.scss'
 })

@@ -85,72 +85,35 @@
 
     <div class="col-12 col-md-12 col-lg-4">
         <div class="appointment p-0">
-            <div class="d-flex justify-content-between  p-4 border-bottom">
+            <div class="d-flex justify-content-between p-4 border-bottom">
                 <h6 class="mb-0 d-flex align-items-center">
                     Latest Appointment
                 </h6>
-                <h6 class="text-muted mb-0">55 Patients</h6>
+                <h6 class="text-muted mb-0">{{ todayAppointments.length }} Patients</h6>
             </div>
             <ul class="list-unstyled mb-0 pl-4 pb-4 pr-4 pt-2">
-
-                <li class="ms-0">
-                    <a >
+                <li *ngFor="let appointment of todayAppointments" class="pt-4 ms-0">
+                    <a>
                         <div class="d-flex align-items-center justify-content-between">
                             <div class="d-inline-flex">
-                                <div class="">
-                                    <h6 class="text-dark mb-0 d-block">Joya Khan</h6>
-                                    <small class="text-muted">Booking on 29th Nov, 2023</small>
+                                <div>
+                                    <h6 class="text-dark mb-0 d-block">{{ appointment.name }}</h6>
+                                    <small class="text-muted">Booking on {{ appointment.datetimeFormatted | date: 'd MMMM, yyyy' }}</small>
                                 </div>
                             </div>
                             <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24"
-                                 stroke-linecap="round" stroke-linejoin="round" class="h5 text-dark" height="1em"
-                                 width="1em" xmlns="http://www.w3.org/2000/svg">
+                                 stroke-linecap="round" stroke-linejoin="round" class="h5 text-dark" height="1em" width="1em"
+                                 xmlns="http://www.w3.org/2000/svg">
                                 <line x1="5" y1="12" x2="19" y2="12"></line>
                                 <polyline points="12 5 19 12 12 19"></polyline>
                             </svg>
                         </div>
                     </a>
                 </li>
-                <li class="pt-4 ms-0">
-                    <a  >
-                        <div class="d-flex align-items-center justify-content-between">
-                            <div class="d-inline-flex">
-                                <div class="">
-                                    <h6 class="text-dark mb-0 d-block">Amelia Muli</h6>
-                                    <small class="text-muted">Booking on 29th Dec, 2023</small>
-                                </div>
-                            </div>
-                            <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24"
-                                 stroke-linecap="round" stroke-linejoin="round" class="h5 text-dark" height="1em"
-                                 width="1em" xmlns="http://www.w3.org/2000/svg">
-                                <line x1="5" y1="12" x2="19" y2="12"></line>
-                                <polyline points="12 5 19 12 12 19"></polyline>
-                            </svg>
-                        </div>
-                    </a>
-                </li>
-                <li class="pt-4 ">
-                    <a >
-                        <div class="d-flex align-items-center justify-content-between">
-                            <div class="d-inline-flex">
-                                <div class="">
-                                    <h6 class="text-dark mb-0 d-block">Nik Ronaldo</h6>
-                                    <small class="text-muted">Booking on 13th March, 2023</small>
-                                </div>
-                            </div>
-                            <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24"
-                                 stroke-linecap="round" stroke-linejoin="round" class="h5 text-dark" height="1em"
-                                 width="1em" xmlns="http://www.w3.org/2000/svg">
-                                <line x1="5" y1="12" x2="19" y2="12"></line>
-                                <polyline points="12 5 19 12 12 19"></polyline>
-                            </svg>
-                        </div>
-                    </a>
-                </li>
-
             </ul>
         </div>
     </div>
+
 
     <div class=" col-12 col-md-12 col-lg-4">
         <div class="appointment p-0">
@@ -233,7 +196,7 @@
                     </div>
 
                     <div class=" flex-column flex-grow-1 mb-2">
-                        <p class="text-primary hover-primary mb-1 fs-16 fw-700">{{ appointment.datetime }}</p>
+                        <p class="text-primary hover-primary mb-1 fs-16 fw-700">{{ appointment.datetimeFormatted }}</p>
                     </div>
 
                     <div class="mb-2">
@@ -276,7 +239,7 @@
                         <td class="">{{ appointment.age }}</td>
                         <td class="">{{ appointment.gender }}</td>
                         <td class="">{{ appointment.phone }}</td>
-                        <td class="">{{ appointment.datetime }}</td>
+                        <td class="">{{ appointment.datetimeFormatted }}</td>
                         <td class="">
                             <a class="text-dark">
                                 <div class="d-flex align-items-center" matTooltip="Doctor Profile will be open from here !">

@@ -1,7 +1,8 @@
 import {Injectable} from '@angular/core';
 import {Appointment} from "./Appointment";
-import {format} from "date-fns";
+import {format, isToday} from "date-fns";
 import {enGB} from "date-fns/locale";
+import {parse} from "node:url";
 
 @Injectable({
     providedIn: 'root'
@@ -12,6 +13,20 @@ export class AppointmentService {
     currentPage = 1;
     totalPages: number[] = [];
 
+    formatDate(date: Date): string {
+        const options: Intl.DateTimeFormatOptions = {
+            day: '2-digit',
+            month: 'short',
+            year: 'numeric',
+            hour: 'numeric',
+            minute: 'numeric',
+            hour12: true
+        };
+        return new Intl.DateTimeFormat('en-US', options).format(date).replace(',', '');
+    }
+
+    today = new Date();
+
     appointments: Appointment[] = [
         {
             id: 1,
@@ -19,7 +34,8 @@ export class AppointmentService {
             age: 25,
             gender: 'Male',
             phone: '050-1234567',
-            datetime: '16th Sep 2023 11:00AM',
+            datetime: new Date(this.today.getTime() + 2 * 60 * 60 * 1000), // 2 hours from start of today
+            datetimeFormatted: this.formatDate(new Date(this.today.getTime() + 2 * 60 * 60 * 1000)),
             doctor: 'Dr. Tarun',
             payment: 'Cash',
             doctorImage: '/assets/icon/menu/dr.png',
@@ -31,7 +47,8 @@ export class AppointmentService {
             age: 44,
             gender: 'Female',
             phone: '052-2345678',
-            datetime: '18th Sep 2023 11:00AM',
+            datetime: new Date(this.today.getTime() + 3 * 60 * 60 * 1000), // 3 hours from start of today
+            datetimeFormatted: this.formatDate(new Date(this.today.getTime() + 3 * 60 * 60 * 1000)),
             doctor: 'Dr. Tarun',
             payment: 'Cash',
             doctorImage: '/assets/icon/menu/dr.png',
@@ -43,7 +60,8 @@ export class AppointmentService {
             age: 30,
             gender: 'Male',
             phone: '055-3456789',
-            datetime: '20th Sep 2023 12:00AM',
+            datetime: new Date(this.today.getTime() + 4 * 60 * 60 * 1000),
+            datetimeFormatted: this.formatDate(new Date(this.today.getTime() + 4 * 60 * 60 * 1000)),
             doctor: 'Dr. Tarun',
             payment: 'Cash',
             doctorImage: '/assets/icon/menu/dr.png',
@@ -55,7 +73,8 @@ export class AppointmentService {
             age: 30,
             gender: 'Female',
             phone: '058-4567890',
-            datetime: '19th Sep 2023 11:00AM',
+            datetime: new Date(this.today.getTime() + 5 * 60 * 60 * 1000),
+            datetimeFormatted: this.formatDate(new Date(this.today.getTime() + 5 * 60 * 60 * 1000)),
             doctor: 'Dr. Tarun',
             payment: 'Cash',
             doctorImage: '/assets/icon/menu/dr.png',
@@ -67,7 +86,8 @@ export class AppointmentService {
             age: 30,
             gender: 'Female',
             phone: '054-5678901',
-            datetime: '24th Sep 2023 10:00AM',
+            datetime: new Date(this.today.getTime() + 6 * 60 * 60 * 1000),
+            datetimeFormatted: this.formatDate(new Date(this.today.getTime() + 6 * 60 * 60 * 1000)),
             doctor: 'Dr. Tarun',
             payment: 'Cash',
             doctorImage: '/assets/icon/menu/dr.png',
@@ -79,7 +99,8 @@ export class AppointmentService {
             age: 30,
             gender: 'Male',
             phone: '054-5678901',
-            datetime: '28th Sep 2023 8:00AM',
+            datetime: new Date(this.today.getTime() + 7 * 60 * 60 * 1000),
+            datetimeFormatted: this.formatDate(new Date(this.today.getTime() + 7 * 60 * 60 * 1000)),
             doctor: 'Dr. Sham',
             payment: 'Cash',
             doctorImage: '/assets/icon/menu/dr.png',
@@ -91,7 +112,8 @@ export class AppointmentService {
             age: 13,
             gender: 'Male',
             phone: '054-5678555',
-            datetime: '29th Sep 2023 11:33AM',
+            datetime: new Date(this.today.getTime() + 8 * 60 * 60 * 1000), // 8 hours from start of today
+            datetimeFormatted: this.formatDate(new Date(this.today.getTime() + 8 * 60 * 60 * 1000)),
             doctor: 'Dr. Sham',
             payment: 'Cash',
             doctorImage: '/assets/icon/menu/dr.png',
@@ -103,13 +125,15 @@ export class AppointmentService {
             age: 30,
             gender: 'Male',
             phone: '054-5678901',
-            datetime: '28th Sep 2023 8:00AM',
+            datetime: new Date(this.today.getTime() + 9 * 60 * 60 * 1000), // 9 hours from start of today
+            datetimeFormatted: this.formatDate(new Date(this.today.getTime() + 9 * 60 * 60 * 1000)),
             doctor: 'Dr. Sham',
             payment: 'Cash',
             doctorImage: '/assets/icon/menu/dr.png',
             Status: 'Pending'
         }
     ];
+
 
     paginatedAppointments: Appointment[] = [];
 
@@ -120,7 +144,8 @@ export class AppointmentService {
 
     public AddAppointment(item: Appointment) {
         item.age = 35
-        item.datetime = format(new Date(), "do MMM yyyy h:mm a", {locale: enGB});
+        item.datetimeFormatted = format(new Date(), "do MMM yyyy h:mm a", {locale: enGB});
+        item.datetime = new Date()
         item.doctorImage = '/assets/icon/menu/dr.png'
         item.payment = 'Cash'
         item.id = (this.appointments.length) + 1
@@ -154,6 +179,17 @@ export class AppointmentService {
             this.currentPage++;
             this.updatePaginatedAppointments();
         }
+    }
+
+    getTodayAppointments(): Appointment[] {
+        const now = new Date();
+        const startOfDay = new Date(now.setHours(0, 0, 0, 0));
+        const endOfDay = new Date(now.setHours(23, 59, 59, 999));
+
+        return this.appointments.filter(appointment => {
+            const appointmentDate = new Date(appointment.datetime);
+            return appointmentDate >= startOfDay && appointmentDate <= endOfDay;
+        });
     }
 
     getDoctors() {

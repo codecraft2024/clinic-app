@@ -4,7 +4,8 @@ export class Appointment {
     age: number=0;
     gender: string="Male";
     phone: string="";
-    datetime: string="";
+    datetime:Date = new Date()
+    datetimeFormatted: string="";
     doctor: string="";
     payment: string="";
     doctorImage: string="";

@@ -8,6 +8,7 @@ import {AddAppointmentComponent} from "../add-appointment/add-appointment.compon
 import {MatDialog} from "@angular/material/dialog";
 import {MatTooltipModule} from '@angular/material/tooltip';
 import {AppointmentService} from "./appointments.service";
+import {app} from "../../../../server";
 
 @Component({
     selector: 'app-home-content',
@@ -19,12 +20,15 @@ import {AppointmentService} from "./appointments.service";
 export class HomeContentComponent {
 
     formattedDate: string;
-
+    todayAppointments:Appointment[]=[];
 
     constructor(protected authService: AuthService, public appointmentsService: AppointmentService, private dialog: MatDialog) {
         this.formattedDate = format(new Date(), "EEEE d MMMM, yyyy 'at' h:mm a", {locale: enGB});
         this.appointmentsService.calculateTotalPages();
         this.appointmentsService.updatePaginatedAppointments();
+
+        this.todayAppointments = appointmentsService.getTodayAppointments();
+        console.log(this.todayAppointments)
     }
 
 

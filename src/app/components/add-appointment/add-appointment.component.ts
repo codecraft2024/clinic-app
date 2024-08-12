@@ -9,6 +9,8 @@ import {Appointment} from "../home-content/Appointment";
 import {AppointmentService} from "../home-content/appointments.service";
 import {FormsModule} from "@angular/forms";
 import {NgForOf} from "@angular/common";
+import {enGB} from "date-fns/locale";
+import {format} from "date-fns";
 
 @Component({
   selector: 'app-modal-content',
@@ -31,7 +33,7 @@ import {NgForOf} from "@angular/common";
 })
 export class AddAppointmentComponent implements  OnInit{
     newAppointment:Appointment = new Appointment();
-    doctors: string[] = ["any"];
+    doctors: string[] = [];
     ngOnInit(): void {
         this.doctors = this.appointmentService.getDoctors();
         console.log(this.doctors)
@@ -42,6 +44,7 @@ export class AddAppointmentComponent implements  OnInit{
     }
 
     saveAppointment() {
+
         this.appointmentService.AddAppointment(this.newAppointment);
     }
 

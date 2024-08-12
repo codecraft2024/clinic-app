@@ -211,32 +211,23 @@
             <div class="card border-bottom  mb-3" *ngFor="let appointment of this.appointmentsService.paginatedAppointments">
                 <div class="p-1">
                     <div class="d-flex justify-content-between">
-
-
-                        <h6 class="card-title">Appointment #{{ appointment.id }}</h6>
-
+                        <h6 class="card-title">Appointment </h6>
                         <div class="d-flex flex-column text-end fw-500">
                             <p class="badge rounded-pill  ms-1" [ngClass]="{ 'pending-status': appointment.Status === 'Pending',
                               'bg-soft-success': appointment.Status === 'Confirmed'}">
                                 {{ appointment.Status }}</p>
-
                         </div>
                     </div>
-
 
                     <div class=" mb-2">
                         <div class="d-flex flex-column flex-grow-1">
                             <p class="text-primary hover-primary mb-1 fs-16 fw-700">{{ appointment.name }}</p>
-
                         </div>
 
                     </div>
                     <div class=" mb-2">
-
-
                         <div class="d-flex flex-column text-end fw-500">
                             <p class="text-primary hover-primary mb-1 fs-16 fw-700">{{ appointment.phone }}</p>
-
                         </div>
                     </div>
 

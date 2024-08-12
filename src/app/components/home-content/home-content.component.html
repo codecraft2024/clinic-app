@@ -238,7 +238,7 @@
     <div class="row mt-4">
 
         <div class="d-block d-lg-none col-12">
-            <div class="card border-bottom  mb-3" *ngFor="let appointment of paginatedAppointments">
+            <div class="card border-bottom  mb-3" *ngFor="let appointment of this.appointmentsService.paginatedAppointments">
                 <div class="p-1">
                     <div class="d-flex justify-content-between">
 
@@ -302,7 +302,7 @@
                     </tr>
                     </thead>
                     <tbody>
-                    <tr *ngFor="let appointment of paginatedAppointments">
+                    <tr *ngFor="let appointment of this.appointmentsService.paginatedAppointments">
                         <th class="">{{ appointment.id }}</th>
                         <td class="">
                             <a class="text-dark">
@@ -339,17 +339,17 @@
     <div class="row text-center">
         <div class="col-12 mt-4">
             <div class="d-md-flex align-items-center text-center justify-content-between">
-            <span class="text-muted me-3">Showing 1 - {{ appointments.length }}
-                out of {{ appointments.length }}</span>
+            <span class="text-muted me-3">Showing 1 - {{ this.appointmentsService.appointments.length }}
+                out of {{ this.appointmentsService.appointments.length }}</span>
                 <ul class="pagination justify-content-center mb-0 mt-3 mt-sm-0">
-                    <li class="page-item" [class.disabled]="currentPage === 1">
-                        <a class="page-link" aria-label="Previous" (click)="prevPage()">Prev</a>
+                    <li class="page-item" [class.disabled]="this.appointmentsService.currentPage === 1">
+                        <a class="page-link" aria-label="Previous" (click)="this.appointmentsService.prevPage()">Prev</a>
                     </li>
-                    <li *ngFor="let page of totalPages" class="page-item" [class.active]="page === currentPage">
-                        <a class="page-link" (click)="goToPage(page)">{{ page }}</a>
+                    <li *ngFor="let page of this.appointmentsService.totalPages" class="page-item" [class.active]="page === this.appointmentsService.currentPage">
+                        <a class="page-link" (click)="this.appointmentsService.goToPage(page)">{{ page }}</a>
                     </li>
-                    <li class="page-item" [class.disabled]="currentPage === totalPages.length">
-                        <a class="page-link" aria-label="Next" (click)="nextPage()">Next</a>
+                    <li class="page-item" [class.disabled]="this.appointmentsService.currentPage === this.appointmentsService.totalPages.length">
+                        <a class="page-link" aria-label="Next" (click)="this.appointmentsService.nextPage()">Next</a>
                     </li>
                 </ul>
             </div>

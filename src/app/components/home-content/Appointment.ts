@@ -1,14 +1,14 @@
-export interface Appointment {
-    id: number;
-    name: string;
-    age: number;
-    gender: string;
-    phone: string;
-    datetime: string;
-    doctor: string;
-    payment: string;
-    doctorImage: string;
-    Status:String
+export class Appointment {
+    id: number=0;
+    name: string="";
+    age: number=0;
+    gender: string="Male";
+    phone: string="";
+    datetime: string="";
+    doctor: string="";
+    payment: string="";
+    doctorImage: string="";
+    Status:string="";
 }
 
 

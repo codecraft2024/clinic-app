@@ -1,16 +1,14 @@
-
 <mat-dialog-content>
-
     <h5 mat-dialog-title>Add Appointment</h5>
-    <form>
+    <form #appointmentForm="ngForm">
         <mat-form-field appearance="outline">
             <mat-label>Patient Name</mat-label>
-            <input matInput placeholder="Enter patient name"  >
+            <input matInput placeholder="Enter patient name" [(ngModel)]="newAppointment.name" name="patientName" required>
         </mat-form-field>
 
         <mat-form-field appearance="outline">
             <mat-label>Gender</mat-label>
-            <mat-select  >
+            <mat-select [(ngModel)]="newAppointment.gender" name="gender" required>
                 <mat-option value="Male">Male</mat-option>
                 <mat-option value="Female">Female</mat-option>
             </mat-select>
@@ -18,33 +16,29 @@
 
         <mat-form-field appearance="outline">
             <mat-label>Phone</mat-label>
-            <input matInput placeholder="Enter phone number"  >
+            <input matInput placeholder="Enter phone number" [(ngModel)]="newAppointment.phone" name="phone" required>
         </mat-form-field>
-
-
 
         <mat-form-field appearance="outline">
             <mat-label>Select Doctor</mat-label>
-            <mat-select>
-                <mat-option value="Scheduled">Dr. Tarun</mat-option>
-                <mat-option value="Completed">Dr. Shame</mat-option>
-                <mat-option value="Cancelled">Dr. Ali</mat-option>
+            <mat-select [(ngModel)]="newAppointment.doctor" name="doctor" required>
+                <mat-option *ngFor="let doctor of doctors" [value]="doctor">
+                    {{ doctor }}
+                </mat-option>
             </mat-select>
         </mat-form-field>
 
-
-
         <mat-form-field appearance="outline">
             <mat-label>Status</mat-label>
-            <mat-select> <!--[(ngModel)]="appointment.Status"-->
-                <mat-option value="Scheduled">Pending</mat-option>
-                <mat-option value="Completed">Confirmed</mat-option>
+            <mat-select [(ngModel)]="newAppointment.Status" name="status" required>
+                <mat-option value="Pending">Pending</mat-option>
+                <mat-option value="Confirmed">Confirmed</mat-option>
                 <mat-option value="Cancelled">Cancelled</mat-option>
             </mat-select>
         </mat-form-field>
     </form>
 </mat-dialog-content>
 <mat-dialog-actions align="end">
-    <button mat-button mat-dialog-close class="btn btn-secondary">Cancel</button>
-    <button mat-button class="btn btn-primary"> <!--(click)="saveAppointment()" -->Save</button>
+    <button mat-button mat-dialog-close class="btn btn-secondary">Close</button>
+    <button mat-button class="btn btn-primary" (click)="saveAppointment()">Save</button>
 </mat-dialog-actions>

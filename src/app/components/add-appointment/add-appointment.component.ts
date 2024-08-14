@@ -55,5 +55,9 @@ export class AddAppointmentComponent implements  OnInit{
         }
     }
 
+    closeModal(){
+        this.dialogRef.close();
+    }
+
 
 }

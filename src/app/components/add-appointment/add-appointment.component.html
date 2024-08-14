@@ -54,6 +54,6 @@
     </form>
 </mat-dialog-content>
 <mat-dialog-actions align="end">
-    <button mat-button mat-dialog-close class="btn btn-secondary">Close</button>
+    <button mat-button mat-dialog-close class="btn btn-secondary" (click)="closeModal()">Close</button>
     <button mat-button class="btn btn-primary" (click)="saveAppointment(appointmentForm)">Save</button>
 </mat-dialog-actions>

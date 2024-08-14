@@ -91,7 +91,7 @@
                 </h6>
                 <h6 class="text-muted mb-0">{{ this.appointmentsService.todayAppointments.length }} Patients</h6>
             </div>
-            <ul class="list-unstyled mb-0 pl-4 pb-4 pr-4 pt-2">
+            <ul class="list-unstyled mb-0 pl-4 pb-4 pr-4 pt-2 scroll-container">
                 <li *ngFor="let appointment of this.appointmentsService.todayAppointments" class="pt-4 ms-0">
                     <a>
                         <div class="d-flex align-items-center justify-content-between">
@@ -125,10 +125,8 @@
                 <h6 class="text-muted mb-0">View all</h6>
             </div>
 
-
             <div class="availability-container">
                 <form>
-
                     <div class="dropdown  w-100" >
                         <input type="text" class="form-control dropdown-input"
                                placeholder="Select an option">
@@ -150,8 +148,6 @@
                     <!-- Availability results will be displayed here -->
                 </div>
             </div>
-
-
         </div>
     </div>
 

@@ -428,4 +428,10 @@ h6 {
 }
 
 
+.scroll-container {
+    max-height: 250px; /* Set the maximum height for the container */
+    overflow-y: auto; /* Enable vertical scrolling */
+}
+
+
 

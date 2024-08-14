@@ -440,4 +440,7 @@ h6 {
 }
 
 
-
+.masked-password {
+    font-family: 'password';
+    -webkit-text-security: disc;
+}

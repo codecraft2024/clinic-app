@@ -433,5 +433,11 @@ h6 {
     overflow-y: auto; /* Enable vertical scrolling */
 }
 
+.mat-headline-large, .mat-typography .mat-headline-large, .mat-typography h4 {
+    font: inherit !important;
+     letter-spacing: inherit !important;
+     margin: inherit !important;
+}
+
 
 
